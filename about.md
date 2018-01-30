@@ -5,8 +5,8 @@ permalink: /about/
 ---
 
 <style>
-	
-.about_table 
+
+about_table 
 {
     border-collapse: collapse;
     width: 40%;
