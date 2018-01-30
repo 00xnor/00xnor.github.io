@@ -11,7 +11,7 @@ permalink: /about/
     border-collapse: collapse;
     width: 40%;
 
-    > table, td, th 
+    table, td, th 
     {
         border-color: transparent;
         padding: 4px;
