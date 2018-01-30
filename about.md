@@ -4,6 +4,45 @@ title: About
 permalink: /about/
 ---
 
+<style>
+	
+.about_table 
+{
+    border-collapse: collapse;
+    width: 40%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fff;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fff;
+    }
+}
+
+tr:hover:nth-child(odd) 
+{
+    background-color: #f5f5f5;
+}
+
+tr:hover:nth-child(even) 
+{
+    background-color: #f5f5f5;
+}
+
+
+
+</style>
+
 ---
 
 |-|:-|
@@ -13,3 +52,4 @@ permalink: /about/
 {:.about_table}
 
 ---
+
