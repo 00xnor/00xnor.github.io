@@ -1,0 +1,12 @@
+---
+layout: post
+date:   2018-01-01 00:00:00 -0800
+group: Group 2
+title:  Post 1
+permalink: /group_2/post_1/
+published: true
+comments: false
+---
+
+place-holder
+

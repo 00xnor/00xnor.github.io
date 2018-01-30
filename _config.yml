@@ -1,0 +1,9 @@
+title: 00xnor.github.io
+email: 00xnor@gmail.com
+baseurl: "" 
+url: "" 
+github_username:  00xnor
+markdown: kramdown
+theme: minima
+excerpt_separator: ""
+
