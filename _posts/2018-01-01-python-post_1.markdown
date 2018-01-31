@@ -10,8 +10,8 @@ comments: false
 
 {% highlight python %}
 def main():
-	print('00xnor')
-	pass
+  print('00xnor')
+  pass
 
 if __name__ == '__main__': main()
 {% endhighlight %}
