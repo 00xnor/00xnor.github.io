@@ -1,17 +1,15 @@
 toc:
-  - title: Logic Design
+  - title: Verilog
     subfolderitems:
       - page: Mystery
-        url: /logic_design/mystery/
-      - page: Synchronizer
-        url: /logic_design/synchronizer/        
+        url: /verilog/mystery/      
       - page: Ring counter
-        url: /logic_design/ring_counter/
-  - title: Group 2
+        url: /verilog/ring_counter/
+  - title: C
     subfolderitems:
       - page: post 1
-        url: /group_2/post_1/
-      - page: post 2
-        url: /group_2/post_2/        
-      - page: post 3
-        url: /group_2/post_3/
+        url: /c/post_1/
+  - title: Python
+    subfolderitems:
+      - page: post 1
+        url: /python/post_1/

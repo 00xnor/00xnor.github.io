@@ -1,12 +1,17 @@
 ---
 layout: post
 date:   2018-01-01 00:00:00 -0800
-group: Group 2
+group: C
 title:  Post 1
-permalink: /group_2/post_1/
+permalink: /c/post_1/
 published: true
 comments: false
 ---
 
-place-holder
+{% highlight c %}
+int main(void)
+{
+    return 0;
+}
+{% endhighlight %}
 

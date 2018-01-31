@@ -1,0 +1,17 @@
+toc:
+  - title: Logic Design
+    subfolderitems:
+      - page: Mystery
+        url: /logic_design/mystery/
+      - page: Synchronizer
+        url: /logic_design/synchronizer/        
+      - page: Ring counter
+        url: /logic_design/ring_counter/
+  - title: Group 2
+    subfolderitems:
+      - page: post 1
+        url: /group_2/post_1/
+      - page: post 2
+        url: /group_2/post_2/        
+      - page: post 3
+        url: /group_2/post_3/
