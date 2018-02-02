@@ -73,3 +73,5 @@ int main(int argc, char *argv[])
 }
 {% endhighlight %}
 
+![top](images/c_post_1.png){:class="img-responsive" .center-image}
+
