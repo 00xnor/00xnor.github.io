@@ -12,6 +12,10 @@ comments: false
 #include "common.h"
 
 //--------------------------------------------------------------------------------------
+#define A(v)   ((uint16_t)(uintptr_t)&(v))
+#define PA(v)  ((uint16_t)(uintptr_t)(v))
+
+//--------------------------------------------------------------------------------------
 typedef struct {
   uint8_t x;
   uint8_t *px;
@@ -30,28 +34,29 @@ typedef struct {
 } a_t;
 
 //--------------------------------------------------------------------------------------
-void print_a(a_t *a)
+void print_a(a_t *a, uint16_t b)
 {
-  printf("name               |  address         |  value\n");
-  printf("-----------------------------------------------\n");
-  printf("a->b.c.x           |  0x%08lx  |  0x%02x\n", (uintptr_t)&(a->b.c.x), (uint8_t)a->b.c.x);
-  printf("*(a->b.c.px)       |  0x%08lx  |  0x%02x\n", (uintptr_t)a->b.c.px, (uint8_t)*(a->b.c.px));
-  printf("-----------------------------------------------\n");
-  printf("a->b.pc->x         |  0x%08lx  |  0x%02x\n", (uintptr_t)&(a->b.pc->x), (uint8_t)a->b.pc->x);
-  printf("*(a->b.pc->px)     |  0x%08lx  |  0x%02x\n", (uintptr_t)a->b.pc->px, (uint8_t)*(a->b.pc->px));
-  printf("-----------------------------------------------\n");
-  printf("a->pb->c.x         |  0x%08lx  |  0x%02x\n", (uintptr_t)&(a->pb->c.x), (uint8_t)a->pb->c.x);
-  printf("*(a->pb->c.px)     |  0x%08lx  |  0x%02x\n", (uintptr_t)a->pb->c.px, (uint8_t)*(a->pb->c.px));
-  printf("-----------------------------------------------\n");
-  printf("a->pb->pc->x       |  0x%08lx  |  0x%02x\n", (uintptr_t)&(a->pb->pc->x), (uint8_t)a->pb->pc->x);
-  printf("*(a->pb->pc->px)   |  0x%08lx  |  0x%02x\n", (uintptr_t)a->pb->pc->px, (uint8_t)*(a->pb->pc->px));
-  printf("-----------------------------------------------\n");
+  printf("a->b.c.x         |  %3d  |  %d\n", A(a->b.c.x)-b, a->b.c.x);
+  printf("*(a->b.c.px)     |  %3d  |  %d\n", PA(a->b.c.px)-b, *(a->b.c.px));
+  printf("a->b.pc->x       |  %3d  |  %d\n", A(a->b.pc->x)-b, a->b.pc->x);
+  printf("*(a->b.pc->px)   |  %3d  |  %d\n", PA(a->b.pc->px)-b, *(a->b.pc->px));
+  printf("a->pb->c.x       |  %3d  |  %d\n", A(a->pb->c.x)-b, a->pb->c.x);
+  printf("*(a->pb->c.px)   |  %3d  |  %d\n", PA(a->pb->c.px)-b, *(a->pb->c.px));
+  printf("a->pb->pc->x     |  %3d  |  %d\n", A(a->pb->pc->x)-b, a->pb->pc->x);
+  printf("*(a->pb->pc->px) |  %3d  |  %d\n", PA(a->pb->pc->px)-b, *(a->pb->pc->px));
 }
 
 //--------------------------------------------------------------------------------------
 int main(int argc, char *argv[])
 {
-  printf("0x%08lx\n", (uintptr_t)&(uint8_t){0});
+  printf("name             |  addr |  value\n");
+  printf("-----------------------------------------------\n");
+
+  uint8_t dummy = 0xFF;
+  uint16_t b = 0xF000 & A(dummy);
+
+  uintptr_t *addr1 = (uintptr_t *)&(uint8_t){0x01};
+  uintptr_t *addr2 = (uintptr_t *)&(uint8_t){0x02};
 
   print_a(&(a_t)
   {
@@ -65,13 +70,22 @@ int main(int argc, char *argv[])
       (c_t)  { (uint8_t){0x05}, &(uint8_t){0x06} },
       &(c_t) { (uint8_t){0x07}, &(uint8_t){0x08} },
     },
-  });
+  }, b);
 
-  printf("0x%08lx\n", (uintptr_t)&(uint8_t){0});
+  uintptr_t *addr3 = (uintptr_t *)&(uint8_t){0x03};
+  uintptr_t *addr4 = (uintptr_t *)&(uint8_t){0x04};
+
+  printf("-----------------------------------------------\n");
+  printf("*addr1           |  %3d  |  %d\n", PA(addr1)-b, (uint8_t)*addr1);
+  printf("*addr2           |  %3d  |  %d\n", PA(addr2)-b, (uint8_t)*addr2);
+  printf("*addr3           |  %3d  |  %d\n", PA(addr3)-b, (uint8_t)*addr3);
+  printf("*addr4           |  %3d  |  %d\n", PA(addr4)-b, (uint8_t)*addr4);
 
   return 0;
 }
 {% endhighlight %}
+
+## example run
 
 ![c_post_1]({{ "images/c_post_1.png" | absolute_url }}){:class="img-responsive" .center-image}
 
