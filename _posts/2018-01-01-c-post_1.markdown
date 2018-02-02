@@ -9,8 +9,66 @@ comments: false
 ---
 
 {% highlight c %}
-int main(void)
+#include "common.h"
+
+//--------------------------------------------------------------------------------------
+typedef struct {
+  uint8_t x;
+  uint8_t *px;
+} c_t;
+
+//--------------------------------------------------------------------------------------
+typedef struct {
+  c_t c;
+  c_t *pc;
+} b_t;
+
+//--------------------------------------------------------------------------------------
+typedef struct {
+  b_t b;
+  b_t *pb;
+} a_t;
+
+//--------------------------------------------------------------------------------------
+void print_a(a_t *a)
 {
+  printf("name               |  address         |  value\n");
+  printf("-----------------------------------------------\n");
+  printf("a->b.c.x           |  0x%08lx  |  0x%02x\n", (uintptr_t)&(a->b.c.x), (uint8_t)a->b.c.x);
+  printf("*(a->b.c.px)       |  0x%08lx  |  0x%02x\n", (uintptr_t)a->b.c.px, (uint8_t)*(a->b.c.px));
+  printf("-----------------------------------------------\n");
+  printf("a->b.pc->x         |  0x%08lx  |  0x%02x\n", (uintptr_t)&(a->b.pc->x), (uint8_t)a->b.pc->x);
+  printf("*(a->b.pc->px)     |  0x%08lx  |  0x%02x\n", (uintptr_t)a->b.pc->px, (uint8_t)*(a->b.pc->px));
+  printf("-----------------------------------------------\n");
+  printf("a->pb->c.x         |  0x%08lx  |  0x%02x\n", (uintptr_t)&(a->pb->c.x), (uint8_t)a->pb->c.x);
+  printf("*(a->pb->c.px)     |  0x%08lx  |  0x%02x\n", (uintptr_t)a->pb->c.px, (uint8_t)*(a->pb->c.px));
+  printf("-----------------------------------------------\n");
+  printf("a->pb->pc->x       |  0x%08lx  |  0x%02x\n", (uintptr_t)&(a->pb->pc->x), (uint8_t)a->pb->pc->x);
+  printf("*(a->pb->pc->px)   |  0x%08lx  |  0x%02x\n", (uintptr_t)a->pb->pc->px, (uint8_t)*(a->pb->pc->px));
+  printf("-----------------------------------------------\n");
+}
+
+//--------------------------------------------------------------------------------------
+int main(int argc, char *argv[])
+{
+  printf("0x%08lx\n", (uintptr_t)&(uint8_t){0});
+
+  print_a(&(a_t)
+  {
+    (b_t)
+    {
+      (c_t)  { (uint8_t){0x01}, &(uint8_t){0x02} },
+      &(c_t) { (uint8_t){0x03}, &(uint8_t){0x04} },     
+    },
+    &(b_t)  
+    {
+      (c_t)  { (uint8_t){0x05}, &(uint8_t){0x06} },
+      &(c_t) { (uint8_t){0x07}, &(uint8_t){0x08} },
+    },
+  });
+
+  printf("0x%08lx\n", (uintptr_t)&(uint8_t){0});
+
   return 0;
 }
 {% endhighlight %}
