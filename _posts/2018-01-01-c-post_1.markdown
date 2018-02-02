@@ -73,11 +73,5 @@ int main(int argc, char *argv[])
 }
 {% endhighlight %}
 
-![c_post_1](images/c_post_1.png){:class="img-responsive" .center-image}
-
-![c_post_2]({{ "/images/c_post_1.png" | absolute_url }}){:.center-image}
-
-![c_post_3]({{ "images/c_post_1.png" | absolute_url }}){:.center-image}
-
-![c_post_4]({{site.url}}/images/c_post_1.png){:.center-image}
+![c_post_1]({{ "images/c_post_1.png" | absolute_url }}){:class="img-responsive" .center-image}
 
