@@ -75,5 +75,7 @@ int main(int argc, char *argv[])
 
 ![c_post_1](images/c_post_1.png){:class="img-responsive" .center-image}
 
-![c_post_1]({{ "/images/screenshot.jpg" | absolute_url }}){.center-image}
+![c_post_2]({{ "/images/screenshot.jpg" | absolute_url }}){:.center-image}
+
+![c_post_3]({{ "images/screenshot.jpg" | absolute_url }}){:.center-image}
 
