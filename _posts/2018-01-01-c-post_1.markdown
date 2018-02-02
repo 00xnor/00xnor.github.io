@@ -79,3 +79,5 @@ int main(int argc, char *argv[])
 
 ![c_post_3]({{ "images/screenshot.jpg" | absolute_url }}){:.center-image}
 
+![c_post_4]({{site.url}}/images/screenshot.jpg){:.center-image}
+
