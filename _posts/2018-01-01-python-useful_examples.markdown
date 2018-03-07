@@ -2,8 +2,8 @@
 layout: post
 date:   2018-01-01 00:00:00 -0800
 group: Python
-title:  Post 1
-permalink: /python/post_1/
+title:  Useful examples
+permalink: /python/useful_examples/
 published: true
 comments: false
 ---

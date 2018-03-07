@@ -15,6 +15,6 @@ module ring_counter(
 );
 always @ (posedge clk or negedge rst)
 if      (rst == 1'b0)   count <= 4'b0001;
-else                    count <= {count[2:0],count[3]}; 
+else                    count <= {count[2:0], count[3]}; 
 endmodul
 {% endhighlight %}
