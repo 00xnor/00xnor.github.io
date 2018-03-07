@@ -24,6 +24,7 @@ int main(void)
   
   mprotect((void *)page_aligned_address, length, PROT_EXEC|PROT_WRITE|PROT_READ);
   printf("%d\n", ((int (*)(void))code)());
+  
   return 0;
 }
 {% endhighlight %}
