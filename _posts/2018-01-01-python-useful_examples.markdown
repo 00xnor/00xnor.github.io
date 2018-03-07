@@ -9,9 +9,10 @@ comments: false
 ---
 
 {% highlight python %}
-import sys, itertools
+import sys, itertools as itt
 
 
+#-----------------------------------------------------------------------------------------------
 def main():
   print('#------------------ list iterator ------------------')
   a = ['one', 'two', 'three']
@@ -43,7 +44,7 @@ def main():
 
   print('#------------------ n grouping ------------------')
   def n_grams(a, n):
-      z = (itertools.islice(a, i, None) for i in range(n))
+      z = (itt.islice(a, i, None) for i in range(n))
       return zip(*z)
   a = [1, 2, 3, 4, 5, 6]
   b = n_grams(a, 3)
@@ -81,15 +82,15 @@ def main():
 
 
   print('#------------------ permutations ------------------')
-  for p in itertools.permutations([1, 2, 3, 4]):
+  for p in itt.permutations([1, 2, 3, 4]):
       print(' '.join(str(x) for x in p))
 
 
   print('#------------------ combinations ------------------')
   a = [1, 2, 3, 4]
-  for p in itertools.chain(itertools.combinations(a, 2), itertools.combinations(a, 3)):
+  for p in itt.chain(itt.combinations(a, 2), itt.combinations(a, 3)):
       print(p)
-  for subset in itertools.chain.from_iterable(itertools.combinations(a, n) for n in range(len(a) + 1)):
+  for subset in itt.chain.from_iterable(itt.combinations(a, n) for n in range(len(a) + 1)):
       print(subset)
 
 
@@ -111,6 +112,9 @@ def main():
   pass
 
 
+
+#-----------------------------------------------------------------------------------------------
 if __name__ == '__main__': main()
+
 {% endhighlight %}
 
