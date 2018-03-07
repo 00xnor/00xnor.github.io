@@ -9,12 +9,19 @@ comments: false
 ---
 
 {% highlight verilog %}
+//-----------------------------------------------------------------------------------------------
 module ring_counter( 
   input clk, rst,
   output reg [3:0] count
 );
-always @ (posedge clk or negedge rst)
-if      (rst == 1'b0)   count <= 4'b0001;
-else                    count <= {count[2:0], count[3]}; 
-endmodul
+
+//-----------------------------------------------------------------------------------------------
+always @ (posedge clk or negedge rst) begin
+  if (rst == 1'b0) begin
+    count <= 4'b0001;
+  end else begin 
+    count <= {count[2:0], count[3]};
+  end                     
+end
+endmodule
 {% endhighlight %}
