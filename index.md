@@ -3,5 +3,5 @@ layout: home
 ---
 
 
-![logo](images/logo.png){:class="img-responsive" .center-image}
+![logo](images/logo.gif){:class="img-responsive" .center-image}
 
