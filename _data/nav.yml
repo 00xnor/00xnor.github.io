@@ -1,13 +1,9 @@
 toc:
-  - title: Verilog
+  - title: Code
     subfolderitems:    
-      - page: Ring counter
-        url: /verilog/ring_counter/
-  - title: C
-    subfolderitems:
-      - page: Arbitrary code execution in Linux
-        url: /c/arbitrary_code_execution_in_linux/
-  - title: Python
-    subfolderitems:
-      - page: Useful examples
-        url: /python/useful_examples/
+      - page: Verilog
+        url: /verilog/
+      - page: C
+        url: /c/
+      - page: Python
+        url: /python/
