@@ -1,0 +1,1124 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"list",
+				"listen_abort"
+			],
+			[
+				"remo",
+				"remote_path"
+			],
+			[
+				"from",
+				"from_bytes"
+			],
+			[
+				"ud",
+				"uds_name"
+			],
+			[
+				"enco",
+				"encoding"
+			],
+			[
+				"en",
+				"encode"
+			],
+			[
+				"tag",
+				"tags"
+			],
+			[
+				"par",
+				"parsed_uri"
+			],
+			[
+				"lo",
+				"local_uri"
+			],
+			[
+				"re",
+				"recv"
+			],
+			[
+				"ERROR",
+				"ERROR_NULL"
+			],
+			[
+				"rd",
+				"r_width"
+			],
+			[
+				"tree",
+				"tree_node_t"
+			],
+			[
+				"end",
+				"end_bit"
+			],
+			[
+				"sta",
+				"start_bit"
+			],
+			[
+				"visi",
+				"visited_nodes"
+			],
+			[
+				"vnod",
+				"vnode_t"
+			],
+			[
+				"vno",
+				"vnodes"
+			],
+			[
+				"ver",
+				"vertices"
+			],
+			[
+				"retu",
+				"RETURN_IF"
+			],
+			[
+				"ar",
+				"array_queue_enqueue"
+			],
+			[
+				"RETU",
+				"RETURN_IF"
+			],
+			[
+				"arra",
+				"array_queue_t"
+			],
+			[
+				"RET",
+				"RETURN_IF"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"RE",
+				"RETURN_IF"
+			],
+			[
+				"st",
+				"stack_t"
+			],
+			[
+				"rm",
+				"rem1"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"s",
+				"s"
+			],
+			[
+				"in",
+				"inc\t#include \"…\""
+			],
+			[
+				"top",
+				"top_front"
+			],
+			[
+				"add",
+				"add_before"
+			],
+			[
+				"RETUR",
+				"RETURN_IF"
+			],
+			[
+				"no",
+				"node_t"
+			],
+			[
+				"nde",
+				"node_t"
+			],
+			[
+				"a",
+				"a_i"
+			],
+			[
+				"rev",
+				"reverse_recursive"
+			],
+			[
+				"con",
+				"cond"
+			],
+			[
+				"cpo",
+				"c_point_double"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"bit",
+				"bitlength"
+			],
+			[
+				"bi",
+				"bitlength"
+			],
+			[
+				"mak",
+				"make_projective"
+			],
+			[
+				"G2",
+				"G2_y_ref"
+			],
+			[
+				"G2_",
+				"G2_x_ref"
+			],
+			[
+				"R_",
+				"R_y_red"
+			],
+			[
+				"pr",
+				"prime"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"me",
+				"memory_init"
+			],
+			[
+				"ic",
+				"include"
+			],
+			[
+				"sess",
+				"session_key_size"
+			],
+			[
+				"keyout",
+				"key_out_size"
+			],
+			[
+				"mas",
+				"master_key_size"
+			],
+			[
+				"sm_crea",
+				"sm_create_mc"
+			],
+			[
+				"sm_eras",
+				"sm_erase_secret_keys"
+			],
+			[
+				"sm_prog",
+				"sm_program_secret_keys"
+			],
+			[
+				"sm_create",
+				"sm_create_session_key"
+			],
+			[
+				"ty",
+				"type"
+			],
+			[
+				"ph_read_",
+				"ph_read_mc"
+			],
+			[
+				"ph_prog",
+				"ph_program_secret_keys"
+			],
+			[
+				"size",
+				"size"
+			],
+			[
+				"mci",
+				"mc_id"
+			],
+			[
+				"tlv",
+				"tlv"
+			],
+			[
+				"dia",
+				"dialer_connect"
+			],
+			[
+				"ta",
+				"tag_size"
+			],
+			[
+				"ace",
+				"accepted_tags"
+			],
+			[
+				"acce",
+				"accepted_tags"
+			],
+			[
+				"acc",
+				"accepted_tags"
+			],
+			[
+				"conne",
+				"connection_fd"
+			],
+			[
+				"abo",
+				"unix_domain_socket_listen_abort"
+			],
+			[
+				"can",
+				"cancellation_token"
+			],
+			[
+				"host",
+				"base_uri_set_host"
+			],
+			[
+				"basepor",
+				"base_uri_set_port"
+			],
+			[
+				"path",
+				"base_uri_set_path"
+			],
+			[
+				"e",
+				"exit"
+			],
+			[
+				"liste",
+				"listener_close"
+			],
+			[
+				"EXIT",
+				"EXIT_IF"
+			],
+			[
+				"memor",
+				"memory_t"
+			],
+			[
+				"ipv",
+				"ipv6"
+			],
+			[
+				"ERR",
+				"ERROR_NONE"
+			],
+			[
+				"ur",
+				"uri_remote"
+			],
+			[
+				"mem",
+				"memory_free"
+			],
+			[
+				"cu",
+				"cursor1"
+			],
+			[
+				"cur",
+				"cursor2"
+			],
+			[
+				"key_",
+				"key_required"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"key",
+				"keystore_index"
+			],
+			[
+				"master",
+				"master_key"
+			],
+			[
+				"master_ke",
+				"master_key_index"
+			],
+			[
+				"spi",
+				"spi_cmd"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"EXIT_",
+				"EXIT_IF_E"
+			],
+			[
+				"uint",
+				"uint16_t"
+			],
+			[
+				"base_region_get",
+				"base_region_get_state"
+			],
+			[
+				"get",
+				"get_state"
+			],
+			[
+				"SPI",
+				"SPI_CMD_STATUS_FAIL"
+			],
+			[
+				"up",
+				"update_permitted"
+			],
+			[
+				"xxx",
+				"xxx_t"
+			],
+			[
+				"hma",
+				"hmac_key"
+			],
+			[
+				"reg",
+				"region_t"
+			],
+			[
+				"rand",
+				"random_data"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"ciph",
+				"cipher_key_size"
+			],
+			[
+				"mac_k",
+				"mac_key_size"
+			],
+			[
+				"mac",
+				"mac_key"
+			],
+			[
+				"out",
+				"out_size"
+			],
+			[
+				"meo",
+				"memory_alloc"
+			],
+			[
+				"base_",
+				"base_slp_t"
+			],
+			[
+				"poll",
+				"poll_timeout_us"
+			],
+			[
+				"recv",
+				"recv_buffer"
+			],
+			[
+				"ui",
+				"uint32_t"
+			],
+			[
+				"EXIF",
+				"EXIT_IF_S"
+			],
+			[
+				"E",
+				"ERROR_FATAL"
+			],
+			[
+				"EX",
+				"EXIT_IF_E"
+			],
+			[
+				"ERROR_",
+				"ERROR_SOCKET_CONNECT"
+			],
+			[
+				"socke",
+				"socket_location"
+			],
+			[
+				"memo",
+				"memory_transport_init"
+			],
+			[
+				"si",
+				"signature_size"
+			],
+			[
+				"send",
+				"send_buffer"
+			],
+			[
+				"li",
+				"line_string"
+			],
+			[
+				"send_",
+				"send_buffer_length"
+			],
+			[
+				"dig",
+				"digest_length"
+			],
+			[
+				"prin",
+				"printb"
+			],
+			[
+				"te",
+				"TEST_MAX_SIZE"
+			],
+			[
+				"TES",
+				"TEST_START"
+			],
+			[
+				"logg",
+				"logger_thread"
+			],
+			[
+				"data",
+				"data_out"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 96.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"to",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package control setti",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ctags",
+				"CTags: Show Symbols (all)"
+			],
+			[
+				"package contr",
+				"Package Control: Install Package"
+			],
+			[
+				"to ",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"to spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"to ta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"to tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Spaces"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/osts/Desktop/top/jekyll",
+		"/home/osts/Desktop/top/jekyll/_data",
+		"/home/osts/Desktop/top/jekyll/_layouts",
+		"/home/osts/Desktop/top/jekyll/_posts",
+		"/home/osts/Desktop/top/jekyll/_sass",
+		"/home/osts/Desktop/top/jekyll/assets",
+		"/home/osts/Desktop/top/jekyll/images"
+	],
+	"file_history":
+	[
+		"/home/osts/Desktop/top/jekyll/assets/1.pde",
+		"/home/osts/Desktop/top/jekyll/_posts/2018-01-01-c-arbitrary_code_execution_in_linux.markdown",
+		"/home/osts/Desktop/top/jekyll/assets/main.scss",
+		"/home/osts/Desktop/top/jekyll/_includes/test.html",
+		"/home/osts/Desktop/top/jekyll/_layouts/default.html",
+		"/home/osts/Desktop/top/jekyll/_layouts/post.html",
+		"/home/osts/Desktop/top/jekyll/_layouts/page.html",
+		"/home/osts/Desktop/top/jekyll/_layouts/home.html",
+		"/home/osts/Desktop/top/jekyll/readme.txt",
+		"/home/osts/Desktop/top/jekyll/assets/processing.js",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/v2/top.py",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/v2/sock.py",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/v2/listener.py",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/v2/logger.py",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/v2/socket.py",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/listener.py",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/socket.py",
+		"/home/osts/Desktop/top/framework/v9/top/src/main.c",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/top.py",
+		"/home/osts/Desktop/top/framework/v9/core/inc/listener.h",
+		"/home/osts/Desktop/top/framework/v9/core/inc/listener_if.h",
+		"/home/osts/Desktop/top/framework/v9/core/src/uds.c",
+		"/home/osts/Desktop/top/framework/v9/core/inc/uds.h",
+		"/home/osts/Desktop/top/framework/v9/core/inc/socket_if.h",
+		"/home/osts/Desktop/top/framework/v9/core/src/listener.c",
+		"/home/osts/Desktop/top/framework/v9/core/inc/socket.h",
+		"/home/osts/Desktop/top/framework/v7/core/src/unix_domain_socket.c",
+		"/home/osts/Desktop/top/memory_model/from_svn/memory_model_v15/core/src/unix_domain_socket.c",
+		"/home/osts/Desktop/top/memory_model/from_svn/memory_model_v17/core/src/unix_domain_socket.c",
+		"/home/osts/Desktop/top/framework/v8/core/src/unix_domain_socket.c",
+		"/home/osts/Desktop/top/framework/v9/Makefile",
+		"/home/osts/Desktop/top/framework/v9/core/src/dialer.c",
+		"/home/osts/Desktop/top/framework/v7/core/src/dialer.c",
+		"/home/osts/Desktop/top/framework/v9/core/src/uri.c",
+		"/home/osts/Desktop/top/framework/v9/core/inc/dialer_if.h",
+		"/home/osts/Desktop/top/memory_model/from_svn/memory_model_v17/memory/src/smc.c",
+		"/home/osts/Desktop/top/memory_model/from_svn/memory_model_v17/memory/src/main.c",
+		"/home/osts/Desktop/top/framework/v9/core/inc/uri_if.h",
+		"/home/osts/Desktop/top/framework/v9/core/inc/dialer.h",
+		"/home/osts/Desktop/top/framework/v9/core/inc/uri.h",
+		"/home/osts/Desktop/top/framework/v9/base/inc/string_hash.h",
+		"/home/osts/Desktop/top/framework/v9/base/inc/list.h",
+		"/home/osts/Desktop/top/framework/v9/base/inc/buffer.h",
+		"/home/osts/Desktop/top/jekyll_sandbox/p5/1.bin",
+		"/home/osts/Desktop/top/jekyll_sandbox/node/tcp_client.js",
+		"/home/osts/Desktop/top/jekyll_sandbox/node/tcp_server.js",
+		"/home/osts/Desktop/top/jekyll_sandbox/node/top.js",
+		"/home/osts/Desktop/top/sandbox/v4/top/src/main.c",
+		"/home/osts/Desktop/top/sandbox/v4/ds/src/ll.c",
+		"/home/osts/Desktop/top/sandbox/v4/top.py",
+		"/home/osts/Desktop/top/sandbox/v4/ds/inc/ll.h",
+		"/home/osts/Desktop/top/sandbox/v4/ds/inc/array_stack.h",
+		"/home/osts/Desktop/top/sandbox/v4/convey/src/convey_tests.c",
+		"/home/osts/Desktop/top/sandbox/v4/Makefile",
+		"/home/osts/Desktop/top/sandbox/v4/convey/inc/convey.h",
+		"/home/osts/Desktop/top/sandbox/v4/convey/src/convey.c",
+		"/home/osts/Desktop/top/sandbox/v4/base/inc/error.h",
+		"/home/osts/Desktop/top/sandbox/v4/ds/inc/ll_stack.h",
+		"/home/osts/Desktop/top/sandbox/v4/base/inc/standard_c_library.h",
+		"/home/osts/Desktop/top/sandbox/v4/ds/inc/ll_queue.h",
+		"/home/osts/Desktop/top/sandbox/v4/ds/inc/array.h",
+		"/home/osts/Desktop/top/sandbox/v4/ds/src/ll_stack.c",
+		"/home/osts/Desktop/top/sandbox/v4/ds/src/binary_tree.c",
+		"/home/osts/Desktop/top/sandbox/v4/ds/inc/binary_tree.h",
+		"/home/osts/Desktop/top/sandbox/v4/ds/src/array.c",
+		"/home/osts/Desktop/top/sandbox/v4/ds/src/array_queue.c",
+		"/home/osts/Desktop/top/sandbox/v4/ds/src/array_stack.c",
+		"/home/osts/Desktop/top/sandbox/v2/ds/src/sort.c",
+		"/home/osts/Desktop/top/sandbox/v2/top.py",
+		"/home/osts/Desktop/top/sandbox/v1/ds/src/sll.c",
+		"/home/osts/Desktop/top/sandbox/v3/top.py",
+		"/home/osts/Desktop/top/sandbox/v4/ds/inc/ds.h",
+		"/home/osts/Desktop/top/sandbox/v3/top/src/main.c",
+		"/home/osts/Desktop/top/memory_model/from_svn/memory_model_v21/core/src/baby_hash.c",
+		"/home/osts/Desktop/top/sandbox/v3/ds/inc/ll.h",
+		"/home/osts/Desktop/top/sandbox/v3/ds/src/ll_queue.c",
+		"/home/osts/Desktop/top/sandbox/v3/ds/inc/ll_queue.h",
+		"/home/osts/Desktop/top/sandbox/v3/ds/src/array_queue.c",
+		"/home/osts/Desktop/top/sandbox/v3/ds/inc/array_queue.h",
+		"/home/osts/Desktop/top/sandbox/v3/ds/inc/ds.h",
+		"/home/osts/Desktop/top/sandbox/v3/ds/src/array_stack.c",
+		"/home/osts/Desktop/top/sandbox/v3/ds/inc/array_stack.h",
+		"/home/osts/Desktop/top/sandbox/v3/ds/inc/ll_stack.h",
+		"/home/osts/Desktop/top/sandbox/v3/ds/inc/array.h",
+		"/home/osts/Desktop/top/sandbox/v3/ds/src/array.c",
+		"/home/osts/Desktop/top/sandbox/v3/ds/src/ll_stack.c",
+		"/home/osts/Desktop/top/sandbox/v3/ds/src/ll.c",
+		"/home/osts/Desktop/top/sandbox/v3/base/inc/error.h",
+		"/home/osts/Desktop/top/sandbox/v3/base/inc/standard_c_library.h",
+		"/home/osts/Desktop/top/sandbox/v3/convey/src/convey_ll_is_working.c",
+		"/home/osts/Desktop/top/sandbox/v2/ds/src/sll.c",
+		"/home/osts/Desktop/top/sandbox/v3/base/src/logger.c",
+		"/home/osts/Desktop/top/sandbox/v2/ds/inc/sll.h",
+		"/home/osts/Desktop/top/sandbox/v3/convey/inc/convey_tests.h",
+		"/home/osts/Desktop/top/sandbox/v3/Makefile",
+		"/home/osts/Desktop/top/sandbox/v2/top/src/main.c",
+		"/home/osts/Desktop/top/sandbox/v2/ds/inc/sort.h",
+		"/home/osts/Desktop/top/sandbox/v2/Makefile",
+		"/home/osts/Desktop/top/sandbox/v2/base/inc/logger.h",
+		"/home/osts/Desktop/top/sandbox/v2/ds/inc/ds.h",
+		"/home/osts/Desktop/top/sandbox/v2/base/src/logger.c",
+		"/home/osts/Desktop/top/sandbox/v2/convey/src/convey_tests.c",
+		"/home/osts/Desktop/top/sandbox/v2/convey/src/convey_ll_is_working.c",
+		"/home/osts/Desktop/top/sandbox/v1/ds/inc/ll_if.h",
+		"/home/osts/Desktop/top/sandbox/v1/ds/inc/sll.h",
+		"/home/osts/Desktop/top/sandbox/v1/ds/inc/ds.h",
+		"/home/osts/Desktop/top/sandbox/v1/top/src/main.c",
+		"/home/osts/Desktop/top/sandbox/v1/convey/src/convey_ll_is_working.c",
+		"/home/osts/Desktop/top/sandbox/v1/base/inc/error.h",
+		"/home/osts/Desktop/top/sandbox/v1/base/src/logger.c",
+		"/home/osts/Desktop/top/sandbox/v1/convey/src/convey.c",
+		"/home/osts/Desktop/top/sandbox/v1/convey/src/convey_tests.c",
+		"/home/osts/Desktop/top/sandbox/v1/Makefile",
+		"/home/osts/Desktop/top/framework/v8/Makefile",
+		"/home/osts/Desktop/top/sandbox/v1/convey/src/convey_uri_is_working.c",
+		"/home/osts/Desktop/top/sandbox/v1/convey/inc/convey_tests.h",
+		"/home/osts/Desktop/top/sandbox/v1/base/inc/standard_c_library.h",
+		"/home/osts/Desktop/top/memory_model/from_svn/memory_model_v20/host/src/slp.c",
+		"/home/osts/Desktop/top/memory_model/from_svn/memory_model_v21/host/src/slp.c",
+		"/home/osts/Desktop/top/framework/v5/core/src/posix_synchronization.c",
+		"/home/osts/Desktop/top/sandbox/v1/base/inc/base.h",
+		"/home/osts/Desktop/top/framework/v6/core/src/task.c",
+		"/home/osts/Desktop/top/framework/v6/core/inc/uri_if.h",
+		"/home/osts/Desktop/top/framework/v6/core/inc/synchronization_if.h",
+		"/home/osts/Desktop/top/framework/v6/core/inc/task_queue_if.h",
+		"/home/osts/Desktop/top/framework/v6/core/inc/task_if.h",
+		"/home/osts/Desktop/top/sandbox/v1/ds/src/ll.c",
+		"/home/osts/Desktop/top/sandbox/v1/ds/inc/ll.h"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"0x3a, 0x46, 0x60",
+			"os",
+			"socket",
+			"sys",
+			"urllib",
+			"sun_path",
+			"unlin",
+			"unl",
+			"unk",
+			"unlink",
+			"unlin",
+			"accepted_tags",
+			"Server",
+			"console.log",
+			"end_bit",
+			")\n",
+			"array_queue",
+			"array_queue_t *s",
+			"_stack_",
+			"s->root",
+			"stack_t",
+			"n_elements",
+			"size",
+			"RETURN_IF",
+			"EXIT_IF_E",
+			"  \n",
+			"c_i",
+			"b_i",
+			"a_i",
+			"ILOG",
+			"head",
+			"c_",
+			"it seems",
+			"! grep -r sage- \"$SAGE_PACKAGES\"/installed/ >& /dev/null",
+			"conda",
+			"anaco",
+			"sage",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"hash_update",
+			"example_socket_accepted_tag_two",
+			"example_socket_accepted_tag_one",
+			"tcp_tag_00xnor",
+			"EXIT_IF_E((*local_host) == URI_SEP_IPV6S, e, e, ipv6);",
+			"EXIT_IF_E(r != 1, e, ERROR_SOCKET_LISTEN, exit);",
+			"AF_INET6",
+			"NETSOCK_",
+			"network_",
+			"network_socket_",
+			"works",
+			"UDSOCK_",
+			"unix_domain_",
+			"UDSOCK_MAX_NAME_LENGTH",
+			"UDSOCK_DEFAULT_CLIENT",
+			"NETSOCK_MAX_NAME_LENGTH",
+			"UDSOCK_",
+			"error",
+			"ERROR_SOCKET_TIMEOUT",
+			"error",
+			"base_socket_",
+			"UDS_EP_",
+			"BS_",
+			"base_ep",
+			"BE_",
+			"time",
+			"rand",
+			"location",
+			"  return error;",
+			"err_t error = ERROR_NONE;",
+			"uint8_t data[SLP_PAGE_SIZE];",
+			"ILOG(MODULE_GLOBAL, \"READ\");",
+			"ILOG(MODULE_GLOBAL, \"PROGRAM\");",
+			"EXIT_IF",
+			"DEMOS_REGION",
+			"EXIT_IF_E(resp.status",
+			"get counter",
+			"ILOG(MODULE_PH",
+			"MODULE_GLO",
+			"UNUSED(e); goto exit:",
+			"EXIT_IF_W(key_required == false, error, error, operation);",
+			"err_t e;",
+			"//------------------------------------------------------------------------------------------------------------------",
+			"static ",
+			", &key_required",
+			"base_ph_get_key",
+			"key_required",
+			"base_ph_get_key",
+			"error = base_ph_get_key(me, cmd->addr, hmac_key, sizeof(hmac_key), &(uint8_t){0});",
+			"base_ph_get_key",
+			"MODULE_GLO",
+			"error = slp_get_counter(me, monotonic_counter, SLP_MONOTONIC_COUNTER_SIZE);",
+			"slp_get_counter",
+			"error = cipher_init(obj->cipher, obj->cipher_key, obj->cipher_key_size);",
+			"hmac_init(obj->hmac, obj->hmac_key, obj->hmac_key_size);",
+			"}}",
+			"base_ph_get_key",
+			"region_index = 0xFF;",
+			"base_ph_get_key",
+			"region_index = 0xFF;",
+			"SO_REUSEADDR",
+			"ERROR_SPI_CLOSED_BY_PEER",
+			"      uint32_t start_address = SLP_PAGES_PER_SECTOR*SLP_PAGE_SIZE*first;\nEXIT_IF_S",
+			"EXIT_IF_S",
+			"0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x11",
+			"exit:\n  return error;",
+			"err_t error = ERROR_NONE;",
+			"ENTER_FUNCTION();",
+			"err_t error = ERROR_NONE;",
+			" );",
+			"obj->state",
+			"EXIT_IF_E",
+			"(const uint8_t *)&resp.data",
+			"nonce",
+			"nonce[SLP_NONCE_SIZE]",
+			"logic",
+			"sample",
+			"KEYSTORE_KEY_MAX_SIZE",
+			"KEYSTORE_KEY_INDEX_MAX",
+			"KEYSTORE_KEY_INDEX_MIN",
+			"SPI_CMD_STATUS_SRCS_FAIL",
+			"obj->config",
+			"NUM_KEYS_PER_REGION",
+			"obj->keystore",
+			"NUM_KEYS_PER_REGION",
+			"SPI_CMD_TAG_SIZE",
+			"SPI_CMD_MONOTONIC_COUNTER_SIZE",
+			"SPI_CMD_PAGE_SIZE",
+			"SPI_CMD_MONOTONIC_COUNTER_SIZE",
+			"SPI_CMD_PAGE_SIZE"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"0xdc, 0xf3, 0xd0",
+			"server",
+			"log",
+			"ll_queue",
+			"array_queue_t *q",
+			"_queue_",
+			"&(s->root)",
+			"ll_stack_t",
+			"size",
+			"capacity",
+			"RETURN_NULL_IF",
+			"EXIT_IF_S",
+			"k",
+			"j",
+			"i",
+			"root",
+			"c_mod_",
+			"example_dialer_accepted_tag_two",
+			"example_listener_accepted_tag_one",
+			"EXIT_IF_S((*local_host) == URI_SEP_IPV6S, e, e, ipv6);",
+			"//EXIT_IF_E(r != 1, e, ERROR_SOCKET_LISTEN, exit);",
+			"PF_INET6",
+			"TCPSOCK_",
+			"tcp_",
+			"tcp_socket_",
+			"NETSOCK_",
+			"network_",
+			"NETSOCK_",
+			"e",
+			"unix_domain_socket_",
+			"UDSOCK_",
+			"BSOCK_",
+			"base_socket",
+			"BS_",
+			"  EXIT_FUNCTION();\n  return error;",
+			"EXIT_FUNCTION();\n  return error;",
+			"ENTER_FUNCTION();\n  err_t error = ERROR_NONE;",
+			"uint8_t data[10];",
+			"ILOG(MODULE_GLOBAL, \"\\nREAD\");",
+			"ILOG(MODULE_GLOBAL, \"\\nPROGRAM\");",
+			"DEMO_REGION",
+			"EXIT_IF_W(resp.status",
+			"//ILOG(MODULE_PH",
+			"UNUSED(e); goto exit;",
+			"EXIT_IF_S(key_required == false, error, error, operation);",
+			"err_t e = ERROR_NONE;",
+			"//--------------------------------------------------------------------------------------------------",
+			"",
+			", &key_required, &access_type, &key_type",
+			"bool key_required = false;\n  error = base_ph_get_key(me, cmd->addr, hmac_key, sizeof(hmac_key), &(uint8_t){0}, &key_required);",
+			"bool key_required = false;\nerror = base_ph_get_key(me, cmd->addr, hmac_key, sizeof(hmac_key), &(uint8_t){0}, &key_required);",
+			"error = base_ph_get_key(me, cmd->addr, hmac_key, sizeof(hmac_key), &(uint8_t){0}, &key_required);",
+			"error = slp_get_counter(me, obj->master_key, obj->master_key_size, monotonic_counter, SLP_MONOTONIC_COUNTER_SIZE);",
+			"error = cipher_init(obj->cipher, key, key_size);",
+			"hmac_init(obj->hmac, key, key_size);",
+			"}",
+			"EXIT_IF_W",
+			"0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF",
+			"exit:\n  EXIT_FUNCTION();\n  return error;",
+			"ENTER_FUNCTION();\n  err_t error = ERROR_NONE;",
+			"ENTER_FUNCTION();\nerr_t error = ERROR_NONE;",
+			"(const uint8_t *)resp.data",
+			"SLP_KEYSTORE_MAX_SIZE",
+			"SLP_KEYSTORE_INDEX_MAX",
+			"SLP_KEYSTORE_INDEX_MIN",
+			"obj->nvm",
+			"SLP_KEYS_PER_REGION",
+			"obj->nvm",
+			"SLP_KEYS_PER_REGION",
+			"SLP_TAG_SIZE",
+			"SLP_MONOTONIC_COUNTER_SIZE",
+			"SLP_PAGE_SIZE",
+			"SLP_MONOTONIC_COUNTER_SIZE",
+			"SLP_PAGE_SIZE",
+			"SLP_TAG_SIZE",
+			"SLP_NONCE_SIZE",
+			"SLP_HMAC_SIZE",
+			"SLP_",
+			"SLP_CMD_MONOTONIC_COUNTER_SIZE",
+			"SLP_CMD_TAG_SIZE",
+			"SLP_CMD_NONCE_SIZE",
+			"SLP_CMD_HMAC_SIZE",
+			"SLP_CMD_PAGE_SIZE",
+			"SLP_",
+			"REGION_STATE_INITIALIZED",
+			"REGION_STATE_UNINITIALIZED",
+			"base_mc",
+			"_PH",
+			"hmac_",
+			"hmac_key",
+			"uint16_t",
+			"spi_cmd_status_t",
+			"SPI_CMD_MONOTONIC_COUNTER_SIZE",
+			"SPI_CMD_TAG_SIZE",
+			"SPI_CMD_NONCE_SIZE",
+			"SPI_CMD_HMAC_SIZE",
+			"SPI_CMD_PAGE_SIZE",
+			"uint16_t",
+			"uint32_t",
+			"uint16_t",
+			"a, d, s",
+			"uint16_t",
+			"uint32_t",
+			"",
+			"addr",
+			"",
+			"(%d)",
+			"SOCKET_",
+			"_SPI",
+			"spi_",
+			"obj->fd",
+			"local_address",
+			"address",
+			"obj->mem",
+			"MEMORY_IPC_",
+			"HOST_IPC_",
+			"memory_ipc_transport",
+			"MEMORY_IPC_TRANSPORT_",
+			"HOST_IPC_TRANSPORT_",
+			"obj->mem",
+			"host_ipc_transport_",
+			"host_transport_ipc_",
+			"HOST_IPC_TRANSPORT_",
+			"*obj",
+			"obj->",
+			"*obj",
+			"obj",
+			"SPI_"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "v1.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

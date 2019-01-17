@@ -53,3 +53,5 @@ tr:hover:nth-child(even)
 
 ---
 
+<canvas data-processing-sources="/assets/about.pde"></canvas>
+
