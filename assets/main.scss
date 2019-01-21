@@ -24,12 +24,12 @@
 
     tr:nth-child(odd) 
     {
-        background: #fff;
+        background: #fcfefb;
     }
 
     tr:nth-child(even) 
     {
-        background: #fff;
+        background: #fcfefb;
     }
 }
 
@@ -45,5 +45,9 @@ tr:hover:nth-child(even)
 
 body, html, .body {
   background: #fcfefb !important;
+
 }
+
+
+
 
