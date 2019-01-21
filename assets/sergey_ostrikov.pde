@@ -59,15 +59,13 @@ PFont myFont;
 //--------------------------------------------------------------------------------
 void setup()
 {
-  size(718, 250, P2D);
-  g = createGraphics(718, 250, P2D);
+  size(250, 250, P2D);
+  g = createGraphics(250, 250, P2D);
   g.translate(width/2, height/2);
 
   randomSeed(second());
   ba = random(0.0, 1.0);
 
-  // noSmooth();
-  // noStroke();
   background(#FCFEFB);
   
   myFont = createFont("/assets/HelveticaNeue.ttf", font_size);

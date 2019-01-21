@@ -15,5 +15,6 @@ permalink: /about/
 
 ---
 
-<canvas data-processing-sources="/assets/sergey_ostrikov.pde"></canvas>
-
+<div id="canvas-container">
+    <canvas data-processing-sources="/assets/sergey_ostrikov.pde"></canvas>
+</div>
