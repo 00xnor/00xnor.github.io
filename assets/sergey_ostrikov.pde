@@ -54,6 +54,8 @@ float pa = 0.0;
 float twt;
 float twa;
 PFont myFont;
+float alpha = 0.0;
+float inc = 0.02;
 
 
 //--------------------------------------------------------------------------------
@@ -108,6 +110,21 @@ void draw()
   twa = 0;
   twt = textWidth(xnor);
 
+  // fg_color = lerpColor(from, to, .25);
+
+  if (c < 60 || alpha > 255)
+  {
+
+  }
+  else
+  {
+    if (c % 40 == 0)
+    {
+      alpha = lerp(alpha, 255, inc);
+      inc += 0.05;
+    }
+  }
+
   for (int i = 0; i < xnor.length(); i++) 
   {
     char ca = xnor.charAt(i);
@@ -126,7 +143,7 @@ void draw()
 
     g.pushMatrix();
     g.translate(bp2_x[char_pidx], bp2_y[char_pidx]);
-    g.fill(fg_color);
+    g.fill(fg_color, alpha);
     g.textAlign(CENTER, CENTER);
     g.text(ca, 0, 0);
     g.rotate(angleOfRotation);
@@ -137,7 +154,7 @@ void draw()
   idx2 = c % s; 
 
   g.beginShape();
-  g.stroke(100);
+  g.stroke(fg_color, alpha);
   g.strokeWeight(0.7);
   g.noFill();
   g.strokeCap(ROUND);
@@ -187,8 +204,8 @@ void draw()
 
   pushMatrix();
   translate(width/2, height/2);
-  stroke(fg_color);
-  strokeWeight(5.4);
+  stroke(fg_color, alpha);
+  strokeWeight(5.4, alpha);
   point(bp_x[idx], bp_y[idx]);
   popMatrix();
 
