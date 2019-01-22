@@ -55,7 +55,8 @@ float twt;
 float twa;
 PFont myFont;
 float alpha = 0.0;
-float inc = 0.02;
+float alpha_target = 255.0;
+float inc = 0.01;
 
 
 //--------------------------------------------------------------------------------
@@ -110,18 +111,16 @@ void draw()
   twa = 0;
   twt = textWidth(xnor);
 
-  // fg_color = lerpColor(from, to, .25);
-
-  if (c < 60 || alpha > 255)
+  if (c < 30 || alpha > 254)
   {
 
   }
   else
   {
-    if (c % 40 == 0)
+    if (c % 10 == 0)
     {
-      alpha = lerp(alpha, 255, inc);
-      inc += 0.05;
+      alpha = lerp(alpha, alpha_target, inc);
+      inc += 0.003;
     }
   }
 
