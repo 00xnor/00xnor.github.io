@@ -8,10 +8,10 @@ font=/assets/HelveticaNeue.ttf;
 //--------------------------------------------------------------------------------
 PGraphics g;
 int s = 173;
-float r = 130-29;
-float a = 115-29;
-float r2 = 110-21;
-float a2 = 115-21;
+float r = 130-37;
+float a = 115-37;
+float r2 = 110-29.5;
+float a2 = 115-29.5;
 float t = 0.0;
 float ts = 2*PI/s;
 float x1 = 0.0;
@@ -49,7 +49,7 @@ int fg_color = #222222;
 int bg_color = #FCFEFB;
 int stroke_color = #000000;
 int fill_color = #444444;
-float font_size = 14.39;
+float font_size = 15.39;
 float pa = 0.0;
 float twt;
 float twa;
@@ -154,7 +154,7 @@ void draw()
 
   g.beginShape();
   g.stroke(fg_color, alpha);
-  g.strokeWeight(0.7);
+  g.strokeWeight(0.6);
   g.noFill();
   g.strokeCap(ROUND);
 
