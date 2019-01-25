@@ -7,208 +7,174 @@ font=/assets/HelveticaNeue.ttf;
 // welcome to the sausige factory :)
 //--------------------------------------------------------------------------------
 PGraphics g;
-int s = 173;
-float r = 130-37;
-float a = 115-37;
-float r2 = 110-29.5;
-float a2 = 115-29.5;
-float t = 0.0;
-float ts = 2*PI/s;
-float x1 = 0.0;
-float x2 = 0.0;
-float x3 = 0.0;
-float y1 = 0.0;
-float y2 = 0.0;
-float y3 = 0.0;
-float ba = 0.5;
-float bs = 0.0029;
-float []cp_x = new float[s];
-float []cp_y = new float[s];
-float []ip_x = new float[s];
-float []ip_y = new float[s];
-float []bp_x = new float[s];
-float []bp_y = new float[s];
-float []cp2_x = new float[s];
-float []cp2_y = new float[s];
-float []ip2_x = new float[s];
-float []ip2_y = new float[s];
-float []bp2_x = new float[s];
-float []bp2_y = new float[s];
+int samples = 1000;
+int path_samples = (int)(0.94*samples);
+float radius = 93*0.98;
+float radius2 = 80.5*0.98;
+float a = 119*0.88;
+float a2 = 125.5*0.88;
+float time = 0.0;
+float time_step = 2*PI/samples;
+//--------------------------------------------------------------------------------
+float []c1_x = new float[samples];
+float []c1_y = new float[samples];
+float []c2_x = new float[samples];
+float []c2_y = new float[samples];
+float []i1_x = new float[samples];
+float []i1_y = new float[samples];
+float []i2_x = new float[samples];
+float []i2_y = new float[samples];
+float []p1_x = new float[samples];
+float []p1_y = new float[samples];
+float []p2_x = new float[samples];
+float []p2_y = new float[samples];
+float blend_amount;
+float blend_step = 0.0029;
+//--------------------------------------------------------------------------------
 String xnor = "Sergey    Ostrikov    00xnor ";
+float total_text_width = textWidth(xnor);
+int text_length = xnor.length();
+float pos_step = 0.0000135;
+char single_char;
+int period_start;
+float start_pos;
+float pos;
+float total_width_acc;
+int char_idx;
+int angle_idx;
+float rotation_angle;
+//--------------------------------------------------------------------------------
 int c = 0;
-int pdl = (int)(0.94*s);
 int idx = 0;
 int idx2 = 0;
 int pidx = 0;
 int pidx2 = 0;
-int scs = 200;
-float startu;
-float dstartu = 0.00001;
-int prevt;
-int fg_color = #222222;
-int bg_color = #FCFEFB;
-int stroke_color = #000000;
-int fill_color = #444444;
-float font_size = 15.39;
-float pa = 0.0;
-float twt;
-float twa;
-PFont myFont;
+int skip_cycles = 400;
 float alpha = 0.0;
 float alpha_target = 255.0;
-float inc = 0.01;
+float alpha_inc = 0.01;
+float line_stroke_weight = 0.6;
+float point_stroke_weight = 5.4;
+int line_color = #222222;
+int point_color = #222222;
+int fg_color = #222222;
+int bg_color = #FCFEFB;
 
 
 //--------------------------------------------------------------------------------
 void setup()
 {
   size(250, 250, P2D);
+  background(bg_color);
+
   g = createGraphics(250, 250, P2D);
   g.translate(width/2, height/2);
+  g.textFont(createFont("/assets/HelveticaNeue.ttf"), 15);
 
-  randomSeed(second());
-  ba = random(0.0, 1.0);
+  blend_amount = random(0.0, 1.0);
 
-  background(#FCFEFB);
-  
-  myFont = createFont("/assets/HelveticaNeue.ttf", font_size);
-  g.textFont(myFont, font_size);
-
-  for (int i = 0; i < s; i++)
+  for (int i = 0; i < samples; i++)
   {    
-    cp_x[i] = r*cos(t);
-    cp_y[i] = r*sin(t);
-    
-    ip_x[i] = (a*sqrt(6)*cos(t))/(sq(sin(t))+2.5);
-    ip_y[i] = (a*sqrt(2)*cos(t)*sin(t))/(sq(sin(t))+1);
-    
-    bp_x[i] = lerp(cp_x[i], ip_x[i], ba);
-    bp_y[i] = lerp(cp_y[i], ip_y[i], ba);        
-    
-    cp2_x[i] = r2*cos(t);
-    cp2_y[i] = r2*sin(t);
-    
-    ip2_x[i] = (a2*sqrt(6)*cos(t))/(sq(sin(t))+2.5);
-    ip2_y[i] = (a2*sqrt(2)*cos(t)*sin(t))/(sq(sin(t))+1);
-    
-    bp2_x[i] = lerp(cp2_x[i], ip2_x[i], ba);
-    bp2_y[i] = lerp(cp2_y[i], ip2_y[i], ba);        
-    
-    t += ts;
+    c1_x[i] = radius*cos(time);
+    c1_y[i] = radius*sin(time);
+
+    i1_x[i] = (a*sqrt(6)*cos(time))/(sq(sin(time))+2.77);
+    i1_y[i] = (a*sqrt(2)*cos(time)*sin(time))/(sq(sin(time))+1);
+
+    c2_x[i] = radius2*cos(time);
+    c2_y[i] = radius2*sin(time);
+
+    i2_x[i] = (a2*sqrt(6)*cos(time))/(sq(sin(time))+2.77);
+    i2_y[i] = (a2*sqrt(2)*cos(time)*sin(time))/(sq(sin(time))+1);
+
+    time += time_step;
   }
 
-  prevt = millis();
+  period_start = millis();  
 }
+
 
 
 //--------------------------------------------------------------------------------
 void draw()
 {
-  g.background(#FCFEFB);
-  int dt = millis() - prevt;
-  prevt = millis();
-  startu += dstartu * dt;  
-  twa = 0;
-  twt = textWidth(xnor);
+  g.background(bg_color);
+  g.fill(fg_color, alpha);
+  g.textAlign(CENTER, CENTER);
 
-  if (c < 30 || alpha > 254)
+  if ((!((c < 30) || (alpha > 254))) && (c % 10 == 0))
   {
-
-  }
-  else
-  {
-    if (c % 10 == 0)
-    {
-      alpha = lerp(alpha, alpha_target, inc);
-      inc += 0.003;
-    }
+    alpha = lerp(alpha, alpha_target, alpha_inc+=0.003);
   }
 
-  for (int i = 0; i < xnor.length(); i++) 
-  {
-    char ca = xnor.charAt(i);
-    
-    twa += 0.5 * textWidth(ca);
-    float u = (startu + map(twa, 0, twt, 0, 1)) % 1.0;
-    twa += 0.5 * textWidth(ca);
-    int char_pidx = (int)(u*s);
-    
-    int angle_idx = (int)(((u + 0.0000001) % 1.0)*s);
-    float atan_y = bp2_y[angle_idx] - bp2_y[char_pidx];
-    float atan_x = bp2_x[angle_idx] - bp2_x[char_pidx];
-    if (atan_x == 0.0) { atan_x = 0.0000001; }
-    float angleOfRotation = lerp(pa, atan2(atan_y, atan_x), 0.5);
-    pa = angleOfRotation;
-
-    g.pushMatrix();
-    g.translate(bp2_x[char_pidx], bp2_y[char_pidx]);
-    g.fill(fg_color, alpha);
-    g.textAlign(CENTER, CENTER);
-    g.text(ca, 0, 0);
-    g.rotate(angleOfRotation);
-    g.popMatrix();
-  }
-
-  idx = (c + int(32)) % s;
-  idx2 = c % s; 
+  idx = (c + int(893)) % samples;
+  idx2 = c % samples; 
 
   g.beginShape();
-  g.stroke(fg_color, alpha);
-  g.strokeWeight(0.6);
+  g.stroke(line_color, alpha);
+  g.strokeWeight(line_stroke_weight);
   g.noFill();
   g.strokeCap(ROUND);
 
-  for (int i = 0; i < pdl; i++)
+  for (int i = 0; i < path_samples; i++)
   {
-    pidx = (idx + i) % s;
-    pidx2 = (idx2 + i) % s;
-    
-    bp_x[pidx] = lerp(cp_x[pidx], ip_x[pidx2], ba);
-    bp_y[pidx] = lerp(cp_y[pidx], ip_y[pidx2], ba); 
+    pidx = (idx + i) % samples;
+    pidx2 = (idx2 + i) % samples;
 
-    bp2_x[pidx] = lerp(cp2_x[pidx], ip2_x[pidx2], ba);
-    bp2_y[pidx] = lerp(cp2_y[pidx], ip2_y[pidx2], ba); 
-    
-    g.curveVertex(bp_x[pidx], bp_y[pidx]);
+    p1_x[pidx] = lerp(c1_x[pidx], i1_x[pidx2], blend_amount);
+    p1_y[pidx] = lerp(c1_y[pidx], i1_y[pidx2], blend_amount);
+
+    p2_x[pidx] = lerp(c2_x[pidx], i2_x[pidx2], blend_amount);
+    p2_y[pidx] = lerp(c2_y[pidx], i2_y[pidx2], blend_amount);
+
+    g.curveVertex(p1_x[pidx], p1_y[pidx]);
   }
 
   g.endShape();
-  image(g, 0, 0);
 
-  if (ba >= 1.0 || ba <= 0.0)
+  start_pos += pos_step*(millis()-period_start);  
+  period_start = millis();
+  total_width_acc = 0;
+
+  for (int i = 0; i < text_length; i++) 
   {
-    if (scs-- > 0)
-    {
-      
-    }
-    else
-    {
-      if (ba <= 0.01)
-      {
-        scs = 600;
-      }
-      else
-      {
-        scs = 200;
-      }
-      
-      bs *= -1;
-    }
+    single_char = xnor.charAt(i);
+
+    total_width_acc += 0.5*textWidth(single_char);
+    pos = (start_pos + map(total_width_acc, 0, total_text_width, 0, 1)) % 1.0;
+    total_width_acc += 0.5 * textWidth(single_char);
+    char_idx = (int)(pos*samples);    
+    angle_idx = (int)(((pos + 0.01) % 1.0)*samples);
+    rotation_angle = atan2(p2_y[angle_idx] - p2_y[char_idx], p2_x[angle_idx] - p2_x[char_idx]);
+
+    g.pushMatrix();
+    g.translate(p2_x[angle_idx], p2_y[angle_idx]);
+    g.rotate(rotation_angle);
+    g.text(single_char, 0, 0);
+    g.popMatrix();
   }
-  
-  if (scs == 200)
-  {
-    ba += bs;
-  }
+
+  image(g, 0, 0);
 
   pushMatrix();
   translate(width/2, height/2);
-  stroke(fg_color, alpha);
-  strokeWeight(5.4, alpha);
-  point(bp_x[idx], bp_y[idx]);
+  stroke(point_color, alpha);
+  strokeWeight(point_stroke_weight, alpha);
+  point(p1_x[idx], p1_y[idx]);
   popMatrix();
 
-  c++; 
+  if ((blend_amount >= 1.0 || blend_amount <= 0.0) && (!(skip_cycles-- > 0)))
+  {
+    skip_cycles = (blend_amount <= 0.01) ? 900 : 400; 
+    blend_step *= -1;
+  }
+  
+  if (skip_cycles == 400)
+  {
+    blend_amount += blend_step;
+  }
+
+  c += 6;
 }
 
 
