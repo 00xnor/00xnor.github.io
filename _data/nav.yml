@@ -7,3 +7,16 @@ toc:
         url: /c/
       - page: Python
         url: /python/
+  - title: Trails
+    subfolderitems:
+      - page: Huddart Park (Woodside, CA)
+        url: /huddart_park/
+      - page: Water Dog Lake Park (Belmont, CA)
+        url: /waterdog_lake_park/
+      - page: Rancho San Antonio Preserve (Los Altos, CA)
+        url: /rancho_san_antonio/
+      - page: Muir Woods, Mount Tamalpais (~Mill Valley, CA)
+        url: /muir_woods_mount_tamalpais/
+      - page: Mount Diablo (~Concord, CA)
+        url: /mount_diablo/
+

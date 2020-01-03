@@ -9,7 +9,7 @@ comments: false
 ---
 
 {% highlight c %}
-#include "common.h"
+#include "stuff.h"
 
 
 //-----------------------------------------------------------------------------
@@ -19,8 +19,7 @@ static const uint8_t code[8] = {
 
 
 //-----------------------------------------------------------------------------
-int main(void)
-{
+int main(void) {
   uintptr_t page_aligned_addr = (uintptr_t)code & ~(getpagesize() - 1);
   size_t length = ((uintptr_t)code - page_aligned_addr) + sizeof(code);
   
