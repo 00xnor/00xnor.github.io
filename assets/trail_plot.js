@@ -2,6 +2,13 @@ const trail_plot_div = document.querySelector('#trail_plot_div');
 var filename = trail_plot_div.dataset.filename || 'default.csv';
 var plot_name = trail_plot_div.dataset.plot_name || 'some trail :)';
 
+
+//------------------------------------------------------------------------------
+var width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+
+
+//------------------------------------------------------------------------------
 Plotly.d3.csv(filename, function(err, rows) {
   function unpack(rows, key) { return rows.map(function(row) { return row[key]; }); }
           
@@ -151,8 +158,8 @@ Plotly.d3.csv(filename, function(err, rows) {
   Plotly.plot('trail_plot_div', data, {
       paper_bgcolor: 'rgba(0,0,0,0)',
       plot_bgcolor: 'rgba(0,0,0,0)',
-      height: 680,
-      width: 718, // keep fixed (don't change)
+      height: height,
+      width: width, // keep fixed (don't change)
       scene: {
         xaxis: { 
           title: '', 
@@ -185,4 +192,32 @@ Plotly.d3.csv(filename, function(err, rows) {
       // scrollZoom: false
     },
   );
+
+  if(window.attachEvent) {
+    window.attachEvent('onresize', function() {
+      alert('attachEvent - resize');
+    });
+  }
+  else if(window.addEventListener) {
+    window.addEventListener('resize', function() {
+      if (width > 718) {
+        width = 718;
+      }
+
+      if (height > 680) {
+        height = 680;
+      }
+    }, true);
+  }
+  else {
+    // the browser doesn't support js event binding
+  }
+
+  Plotly.relayout('trail_plot_div', {
+    width: width,
+    height: height
+  });
+
 });
+
+
