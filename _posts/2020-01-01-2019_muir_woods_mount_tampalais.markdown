@@ -2,7 +2,7 @@
 layout: post
 date:   2019-12-28 00:00:00 -0800
 group: Trail
-title: Muir Woods, Mount Tamalpais (~Mill Valley, CA)
+title: Muir Woods, Mount Tamalpais
 permalink: /muir_woods_mount_tamalpais/
 published: true
 comments: false

@@ -9,6 +9,16 @@ var height = window.innerHeight|| document.documentElement.clientHeight|| docume
 
 
 //------------------------------------------------------------------------------
+if (width > 718) {
+  width = 718;
+}
+
+if (height > 680) {
+  height = 680;
+}
+
+
+//------------------------------------------------------------------------------
 Plotly.d3.csv(filename, function(err, rows) {
   function unpack(rows, key) { return rows.map(function(row) { return row[key]; }); }
           

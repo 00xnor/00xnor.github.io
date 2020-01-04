@@ -2,7 +2,7 @@
 layout: post
 date:   2019-12-24 00:00:00 -0800
 group: Trail
-title: Water Dog Lake Park (Belmont, CA)
+title: Water Dog Lake Park
 permalink: /waterdog_lake_park/
 published: true
 comments: false

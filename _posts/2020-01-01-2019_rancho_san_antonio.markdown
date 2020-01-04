@@ -2,7 +2,7 @@
 layout: post
 date:   2019-12-25 00:00:00 -0800
 group: Trail
-title: Rancho San Antonio Preserve (Los Altos, CA)
+title: Rancho San Antonio Preserve
 permalink: /rancho_san_antonio/
 published: true
 comments: false
