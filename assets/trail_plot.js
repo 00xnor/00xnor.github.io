@@ -9,16 +9,6 @@ var height = window.innerHeight|| document.documentElement.clientHeight|| docume
 
 
 //------------------------------------------------------------------------------
-if (width > 718) {
-  width = 718;
-}
-
-if (height > 680) {
-  height = 680;
-}
-
-
-//------------------------------------------------------------------------------
 Plotly.d3.csv(filename, function(err, rows) {
   function unpack(rows, key) { return rows.map(function(row) { return row[key]; }); }
           
@@ -164,6 +154,9 @@ Plotly.d3.csv(filename, function(err, rows) {
       hoverinfo: 'skip'
     });
   }
+
+  if (width > 718) { width = 718; }
+  if (height > 680) { height = 680; }
 
   Plotly.plot('trail_plot_div', data, {
       paper_bgcolor: 'rgba(0,0,0,0)',
