@@ -162,7 +162,7 @@ Plotly.d3.csv(filename, function(err, rows) {
       paper_bgcolor: 'rgba(0,0,0,0)',
       plot_bgcolor: 'rgba(0,0,0,0)',
       height: height,
-      width: width, // keep fixed (don't change)
+      width: width,
       scene: {
         xaxis: { 
           title: '', 
