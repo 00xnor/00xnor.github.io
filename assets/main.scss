@@ -1,0 +1,244 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
+.about_table 
+{
+    border-collapse: collapse;
+    width: 40%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+.about_table2
+{
+    border-collapse: collapse;
+    width: 70%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+.about_table3
+{
+    border-collapse: collapse;
+    width: 85%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+.about_table4
+{
+    border-collapse: collapse;
+    width: 100%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+.about_table5
+{
+    border-collapse: collapse;
+    width: 85%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.about_table6
+{
+    border-collapse: collapse;
+    width: 52%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+.about_table7
+{
+    border-collapse: collapse;
+    width: 56%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.about_table8 
+{
+    border-collapse: collapse;
+    width: 40%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.image_left 
+{
+  float: left;
+  padding: 18px;
+}
+
+.image_left2 
+{
+  float: left;
+  padding: 8px;
+}
+
+.image_right 
+{
+  float: right;
+  padding: 3px;
+}
+
+tr:hover:nth-child(odd) 
+{
+    background-color: #f5f5f5;
+}
+
+tr:hover:nth-child(even) 
+{
+    background-color: #f5f5f5;
+}
+
+body, html, .body {
+  background: #fcfefb !important;
+
+}
+
+
+#canvas-container {
+   width: 100%;
+   text-align:center;
+}
+
+canvas {
+   display: inline;
+}
+
+

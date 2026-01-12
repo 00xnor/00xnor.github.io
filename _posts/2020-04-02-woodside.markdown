@@ -1,0 +1,27 @@
+---
+layout: post
+date:   2020-04-02 00:00:00 -0800
+group: Trail
+title: Woodside
+permalink: /woodside/
+published: true
+comments: false
+---
+
+
+---
+
+|---|:-|
+| **distance:**                  | \~13.25 miles |
+| **cumulative elevation gain:** | \~2,136 feet |
+| **reference:**                 | [www.strava.com/activities/3247669137](https://www.strava.com/activities/3247669137){:target="_blank"}|
+{:.about_table2}
+
+---
+
+
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<div id='trail_plot_div' data-filename='../assets/csv/2020_april_2.csv' data-plot_name='Lonely Trail'>
+<script src="/assets/trail_plot.js"></script>
+</div>
+

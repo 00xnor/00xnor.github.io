@@ -1,0 +1,22 @@
+---
+layout: post
+date:   2020-04-08 00:00:00 -0800
+group: Investing
+title: Loans
+permalink: /loans/
+published: false
+comments: false
+---
+
+
+---
+
+1. Fixed-rate
+2. Variable-rate
+3. Interest-only
+
+---
+
+
+
+
