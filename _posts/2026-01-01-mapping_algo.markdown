@@ -39,7 +39,6 @@ mathjax: true
 
 |-:|
 | <span style="font-size: 1px;"> .  </span> |
-| <span style="font-size: 1px;"> .  </span> |
 {:.about_table4}
 
 |-:|
