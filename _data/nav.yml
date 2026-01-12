@@ -1,5 +1,23 @@
 toc:
-  - title: Projects
+  - title: Trails
+    subfolderitems:
+      - page: Huddart Park
+        url: /huddart_park/
+      - page: Water Dog Lake Park
+        url: /waterdog_lake_park/
+      - page: Rancho San Antonio Preserve
+        url: /rancho_san_antonio/
+      - page: Muir Woods, Mount Tamalpais
+        url: /muir_woods_mount_tamalpais/
+      - page: Mount Diablo
+        url: /mount_diablo/
+      - page: Portola Valley
+        url: /portola_valley/
+      - page: Woodside
+        url: /woodside/
+      - page: Highway 1
+        url: /highway_1/
+  - title: Tech
     subfolderitems:    
       - page: Mapping Algorithm
         url: /mapping_algo/

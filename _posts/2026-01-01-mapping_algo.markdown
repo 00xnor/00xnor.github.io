@@ -1,20 +1,19 @@
 ---
 layout: post
-date:   2026-01-01 00:00:00 -0800
-group: Projects
+date:   2023-04-01 00:00:00 -0800
+group: Tech
 title: Mapping Algorithm for Distributed Computing
 permalink: /mapping_algo/
 published: true
 comments: false
-mathjax: true
 ---
 
 
 ---
 
 |:-|
-| <span style="font-size: 16px;"> For workloads executing on distributed compute fabrics, performance is often limited by data movement <br> rather than computation. As a result, efficient execution depends critically on how the workload is partitioned <br> and **placed across hardware resources**. </span> |
-| <span style="font-size: 16px;"> This page demonstrates an algorithm I developed for distributed systems that maps a task graph onto a <br> hardware connectivity graph. The task graph captures computation and communication dependencies, <br> while the hardware graph represents compute elements and their physical interconnects. The algorithm automatically explores a large search space through an iterative process and converges to <br> communication-efficient task assignments while respecting dependency constraints.  </span> |
+| <span style="font-size: 16px;"> For workloads executing on distributed compute fabrics, performance is often limited by data movement rather than computation. As a result, efficient execution depends critically on how the workload is partitioned and **placed across hardware resources**. </span> |
+| <span style="font-size: 16px;"> This page demonstrates an algorithm I developed ([**code**](https://github.com/00xnor/mapping_algo){:target="_blank"}) for distributed systems that maps a task graph onto a hardware connectivity graph. The task graph captures computation and communication dependencies, while the hardware graph represents compute elements and their physical interconnects. The algorithm automatically explores a large search space through an iterative process and converges to communication-efficient task assignments while respecting dependency constraints.  </span> |
 | <span style="font-size: 16px;"> Based on [**Ant Colony Optimization**](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms){:target="_blank"}, the algorithm sends out a group of ants to explore possible paths through the hardware graph. Initially, paths are selected randomly, but over iterations selection becomes biased towards more efficient paths. To guide path selection, top-performing ants leave trails where they travel. And to avoid local minima, the trails that aren’t reinforced by top runners gradually fade away. Over time, the system converges on good solutions without exhaustively exploring every possibility. </span> |
 {:.about_table4}
 
