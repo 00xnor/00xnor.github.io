@@ -1,10 +1,8 @@
-@import "_sass/minima";
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
 
-.center-image
-{
-    margin: 0 auto;
-    display: block;
-}
+@import "minima";
 
 .about_table 
 {

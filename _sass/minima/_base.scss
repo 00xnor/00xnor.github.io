@@ -93,8 +93,7 @@ a {
   text-decoration: none;
 
   &:visited {
-    /*color: color.adjust($brand-color, $lightness: -15%);*/
-    color: $brand-color;
+    color: color.adjust($brand-color, $lightness: -15%);
   }
 
   &:hover {
