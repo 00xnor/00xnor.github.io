@@ -1,6 +1,6 @@
 ---
 layout: post
-date:   2026-01-15 00:00:00 -0800
+date:   2026-01-14 00:00:00 -0800
 group: Tech
 title: Mapping Algorithm for Distributed Computing
 permalink: /mapping_algo/

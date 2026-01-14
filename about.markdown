@@ -27,7 +27,7 @@ permalink: /about/
 
 |:-|
 ● | <span style="font-size: 16px;"> in this role, I shaped the evaluation of an emerging in-memory compute technology by developing a graph compiler and using it as a primary vehicle for architecture exploration and tradeoff analysis </span> |
-● | <span style="font-size: 16px;"> for PPA analysis, I developed a heuristic-based algorithm to map a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-01-mapping_algo %}))<br> (neural network) → (distributed in-memory compute fabric) </span> |
+● | <span style="font-size: 16px;"> for PPA analysis, I developed a heuristic-based algorithm to map a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-14-mapping_algo %}))<br> (neural network) → (distributed in-memory compute fabric) </span> |
 ● | <span style="font-size: 16px;"> and finally to improve PPA, I defined graph transformations that enable neural network deployment under tight on-chip memory constraints; demonstrated results at JEDEC AI workshops </span> |
 {:.about_table5}
 
