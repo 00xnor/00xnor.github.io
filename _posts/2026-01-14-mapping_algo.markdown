@@ -36,9 +36,8 @@ comments: false
 | <span style="font-size: 16px;"> More guided than a brute force search, yet not nearly as stringent as a direct solution is the iterative method. It integrates a **heuristic with stochastic elements** to navigate the search space and find satisfactory solutions, including optimal. And sometimes very quickly with proper biasing. But even without nuanced biasing, it's only a matter of time until a good solution emerges. </span> |
 {:.about_table7}
 
-|-:|
-| <span style="font-size: 1px;"> .  </span> |
-{:.about_table4}
+
+---
 
 |-:|
 |  <span style="font-size: 22px;">  Don't Give Bad Randomness a Chance </span> |
