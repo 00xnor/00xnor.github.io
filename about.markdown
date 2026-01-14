@@ -10,15 +10,14 @@ permalink: /about/
 |:-|
 | <span style="font-size: 16px;"> **Sergey Ostrikov** </span> |
 | <span style="font-size: 16px;"> <00xnor@gmail.com> </span> |
-| <span style="font-size: 16px;"> Forever a student-athlete </span> |
 {:.about_table2}
 [comment]: # | [github.com/00xnor](https://github.com/00xnor){:target="_blank"} |
 
 ---
 
 |:-|
-| <span style="font-size: 16px;"> Outside of sports, I'm an engineer with a decade of hands-on experience in silicon development, including <br> early-stage development of an **AI inference accelerator** and full-cycle work on a **secure memory IC** <br> from concept to delivery and certification. Some of the things I’ve been up to professionally: </span> |
-{:.about_table4}
+| <span style="font-size: 16px;"> Hi, I'm an engineer with a decade of hands-on experience in silicon development, including early-stage development of an **AI inference accelerator** and full-cycle work on a **secure memory IC** from concept to delivery and certification. Some of the things I’ve been up to professionally: </span> |
+{:.about_table3}
 
 ---
 
@@ -27,10 +26,10 @@ permalink: /about/
 {:.about_table3}
 
 |:-|
-● | <span style="font-size: 16px;"> in this role, I shaped the evaluation of an emerging in-memory <br> compute technology by using a [**graph compiler**](https://github.com/apache/tvm){:target="_blank"} as a primary <br> vehicle for architecture exploration and tradeoff analysis </span> |
-● | <span style="font-size: 16px;"> for PPA analysis, I developed a heuristic-based algorithm <br> to map a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-01-mapping_algo %}))<br> (neural network) → (distributed in-memory compute fabric) </span> |
-● | <span style="font-size: 16px;"> and finally to improve PPA, I defined graph transformations that enable <br> neural network deployment under tight on-chip memory constraints; <br> demonstrated results at JEDEC AI workshops </span> |
-{:.about_table3}
+● | <span style="font-size: 16px;"> in this role, I shaped the evaluation of an emerging in-memory compute technology by using a [**graph compiler**](https://github.com/apache/tvm){:target="_blank"} as a primary vehicle for architecture exploration and tradeoff analysis </span> |
+● | <span style="font-size: 16px;"> for PPA analysis, I developed a heuristic-based algorithm to map a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-01-mapping_algo %}))<br> (neural network) → (distributed in-memory compute fabric) </span> |
+● | <span style="font-size: 16px;"> and finally to improve PPA, I defined graph transformations that enable neural network deployment under tight on-chip memory constraints; demonstrated results at JEDEC AI workshops </span> |
+{:.about_table5}
 
 ---
 
@@ -58,10 +57,10 @@ permalink: /about/
 {:.about_table3}
 
 |:-|
-● | <span style="font-size: 16px;"> in this role, I led a feasibility study for a secure memory [device](https://www.infineon.com/products/memories/nor-flash/semper-nor-flash-family/semper-secure-nor-flash){:target="_blank"}, <br> analyzed and improved secure memory IP, and contributed to <br> successful security certification ([CAVP](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/details?product=17774){:target="_blank"}, [CMVP](https://csrc.nist.gov/projects/cryptographic-module-validation-program/entropy-validations/certificate/165){:target="_blank"}) </span> |
-● | <span style="font-size: 16px;"> wrote a C model of a secure NOR Flash device to determine <br> security aspects of the product itself, along with the systems <br> it was intended to operate within (available in the [product SDK](https://softwaretools.infineon.com/tools/com.ifx.tb.tool.sempersdksecure){:target="_blank"}) </span> |
-● | <span style="font-size: 16px;"> coded apps, middleware and numerous drivers <br> for demo purposes: MQTT, TLS, TCP/IP, WiFi, ETH, BLE, ... </span> |
-{:.about_table3}
+● | <span style="font-size: 16px;"> in this role, I led a feasibility study for a secure memory [device](https://www.infineon.com/products/memories/nor-flash/semper-nor-flash-family/semper-secure-nor-flash){:target="_blank"}, analyzed and improved secure memory IP, and contributed to successful security certification ([CAVP](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/details?product=17774){:target="_blank"}, [CMVP](https://csrc.nist.gov/projects/cryptographic-module-validation-program/entropy-validations/certificate/165){:target="_blank"}) </span> |
+● | <span style="font-size: 16px;"> wrote a C model of a secure NOR Flash device to determine security aspects of the product itself, along with the systems it was intended to operate within (available in the [product SDK](https://softwaretools.infineon.com/tools/com.ifx.tb.tool.sempersdksecure){:target="_blank"}) </span> |
+● | <span style="font-size: 16px;"> coded apps, middleware and numerous drivers for demo purposes: MQTT, TLS, TCP/IP, WiFi, ETH, BLE, ... </span> |
+{:.about_table5}
 
 ---
 
