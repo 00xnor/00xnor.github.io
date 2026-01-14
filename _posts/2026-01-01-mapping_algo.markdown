@@ -46,9 +46,9 @@ comments: false
 
 
 |:-|
-| <span style="font-size: 16px;"> The iterative mapping employs <span style="font-size: 16px;  color: #FF5733; "> **Ants** </span> to search for an optimal path. Each <span style="font-size: 16px;  color: #FF5733; "> **Ant** </span> starts at a specific location in the hardware graph (e.g. top-left corner in the animation above) and is given a number of choices on where to go next. Before hopping to the next location, the <span style="font-size: 16px;  color: #FF5733; "> **Ant** </span> assigns a task to the current location and removes it from the task graph marking it as complete. Each <span style="font-size: 16px;  color: #FF5733; "> **Ant** </span> keeps hopping until all tasks from the task graph are gone. </span> |
-| <span style="font-size: 16px;"> This entire process represents an algorithm's iteration—a single <span style="font-size: 16px;  color: #FF5733; "> **Ant Colony** </span> run. Once the run is complete, the algorithm determines the top performer. During the very first run, the <span style="font-size: 16px;  color: #FF5733; "> **Ants** </span> are unbiased. This means one simply happens to <span style="font-size: 16px;  color: #FF5733; "> **randomly** </span> find a more efficient path than the others. Just like in any competition, the winner gets to brag about how it did it: “I started in the top left, moved right, then down…” You get the idea. Having listened to the winner, the next <span style="font-size: 16px;  color: #FF5733; "> **Ant Colony** </span> run becomes slightly biased towards the <span style="font-size: 16px;  color: #FF5733; "> **randomly** </span> chosen path. This is good randomness though, as it produced the best result so far. </span> |
-| <span style="font-size: 16px;"> To keep producing improvements, the <span style="font-size: 16px;  color: #FF5733; "> **heuristic** </span> ought to maintain  just the right conditions for randomness to work its magic, providing guidance but also allowing deviaton. Here's how this is done in practice: </span> |
+| <span style="font-size: 16px;"> The iterative mapping employs <span style="font-size: 16px;  color: #a82a2a; "> **Ants** </span> to search for an optimal path. Each <span style="font-size: 16px;  color: #a82a2a; "> **Ant** </span> starts at a specific location in the hardware graph (e.g. top-left corner in the animation above) and is given a number of choices on where to go next. Before hopping to the next location, the <span style="font-size: 16px;  color: #a82a2a; "> **Ant** </span> assigns a task to the current location and removes it from the task graph marking it as complete. Each <span style="font-size: 16px;  color: #a82a2a; "> **Ant** </span> keeps hopping until all tasks from the task graph are gone. </span> |
+| <span style="font-size: 16px;"> This entire process represents an algorithm's iteration—a single <span style="font-size: 16px;  color: #a82a2a; "> **Ant Colony** </span> run. Once the run is complete, the algorithm determines the top performer. During the very first run, the <span style="font-size: 16px;  color: #a82a2a; "> **Ants** </span> are unbiased. This means one happens to <span style="font-size: 16px;  color: #a82a2a; "> **randomly** </span> find a more efficient path than the others. Just like in any competition, the winner gets to brag about how it did it: “I started in the top left, moved right, then down…” You get the idea. Having listened to the winner, the next <span style="font-size: 16px;  color: #a82a2a; "> **Ant Colony** </span> run becomes slightly biased towards the <span style="font-size: 16px;  color: #a82a2a; "> **randomly** </span> chosen path. This is good randomness though, as it produced the best result so far. </span> |
+| <span style="font-size: 16px;"> To keep producing improvements, the <span style="font-size: 16px;  color: #a82a2a; "> **heuristic** </span> ought to maintain  just the right conditions for randomness to work its magic, providing guidance but also allowing deviaton. Here's how this is done in practice: </span> |
 | <span style="font-size: 16px;">  </span> |
 {:.about_table4}
 
@@ -160,6 +160,14 @@ non_top_performer = 0.8106018/213.544432 = ~0.38%
 | <span style="font-size: 1px;"> .  </span> |
 {:.about_table4}
 
+|-:|
+| <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. While the theoretically best solution is 19 (which the algorithm hasn't found), the algorithm enables a fairly quick and straigh-forward way to explore various hardware topologies and see how well various workloads map onto them. </span> |
+{:.about_table4}
+
+|-:|
+| <span style="font-size: 1px;"> .  </span> |
+{:.about_table4}
+
 ![mapping](../images/non_linear_mapping.gif){:.center-image}
 
 |-:|
@@ -167,4 +175,5 @@ non_top_performer = 0.8106018/213.544432 = ~0.38%
 {:.about_table4}
 
 ---
+
 
