@@ -1,6 +1,6 @@
 ---
 layout: post
-date:   2023-04-01 00:00:00 -0800
+date:   2026-01-15 00:00:00 -0800
 group: Tech
 title: Mapping Algorithm for Distributed Computing
 permalink: /mapping_algo/
@@ -161,7 +161,7 @@ non_top_performer = 0.8106018/213.544432 = ~0.38%
 {:.about_table4}
 
 |-:|
-| <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. While the theoretically best solution is 19 (which the algorithm hasn't found), the algorithm enables a fairly quick and straigh-forward way to explore various hardware topologies and see how well various workloads map onto them. </span> |
+| <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. While the theoretically best solution is 19 and the algorithm hasn't found it, the algorithm enables a fairly quick and straight-forward way to explore various hardware topologies and see how well various workloads map onto them. </span> |
 {:.about_table4}
 
 |-:|
