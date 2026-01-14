@@ -107,19 +107,21 @@ tau = 1/energy_per_transfer
 
 # Time component consists of computation time
 # and communication time
-time_compute = dag.nodes[node]['weight']
-time_communicate = dag.edges[edge]['weight']*dist
-time_total = time_compute + time_communicate
+t_compute = dag.nodes[node]['weight']
+t_communicate = dag.edges[edge]['weight']*dist
+time_total = t_compute + t_communicate
 phi = 1/time_total 
 
-# The heuristic is calculated as follows:
-# alpha (0.2) is how much energy matters
-# beta  (0.2) is how much time matters
+# The heuristic allows for relative adjustment
+# on what component matters more, if any.  
+# alpha (e.g. 0.2) is how much energy matters
+# beta  (e.g. 0.2) is how much time matters
 p = (tau**alpha)*(phi**beta)  
 
 # Numerically, heuristic for a hop with manhattan
-# distance 3 is calculated as follows, assuming 
-# 1 femtojoule per byte for routing & linking:
+# distance 3 is calculated as follows (plugging in 
+# 1 femtojoule per byte for routing & linking and
+# a 128-bit bus @ 200MHz for communication):
 n_bytes = 1024
 dist = 3
 e_route = 1
@@ -127,29 +129,29 @@ e_link = 1
 energy_per_byte = (3 + 1)*1 + 3*1 = 7
 energy_per_transfer = 1024*7 = 7168
 tau = 1/7168 = 0.000139509
-time_communicate = 40*3 = 120
-time_compute = 100
-time_total = 100 + 120
-phi = 1/220 = 0.004545455
-p = (0.000139509**0.2)*(0.004545455**0.2) = 0.0576018
+t_compute = 290
+t_communicate = 320*3 = 960
+time_total = 290 + 960 = 1250
+phi = 1/1250 = 0.0008
+p = (0.000139509**0.2)*(0.0008**0.2) = 0.0406948
 
 # At the end of each iteration, 
 # pheromone is added to the heuristic.
 # For top performer edges:
-p = 0.0576018 + 1.753 = 1.8106018
+p = 0.0406948 + 1.753 = 1.7936948
 # For all others:
-p = 0.0576018 + 0.753 = 0.8106018
+p = 0.0406948 + 0.753 = 0.7936948
 
 # And so the final probabilities after 
 # the first iteration for each hop would be:
 # (assuming a 4x4 mesh with 240 edges and
 # and the 19-edge graph from above)
-sum_of_all = 1.8106018*19 + 0.8106018*221 = 213.544432
-top_performer = 1.8106018/213.544432 = ~0.85%
-non_top_performer = 0.8106018/213.544432 = ~0.38%
+sum_of_all = 1.7936948*19 + 0.7936948*221 = 209.486752
+top_performer = 1.7936948/209.486752 = ~0.856%
+non_top_performer = 0.7936948/209.486752 = ~0.379%
 
 # Sanity check
-19*0.85% + 221*0.38% = 100%
+19*0.856% + 221*0.379% = 100%
 
 # Fine-tuning is left to the specific use-cases.
 # The algorithm simply iterates from this point on.
@@ -161,7 +163,7 @@ non_top_performer = 0.8106018/213.544432 = ~0.38%
 {:.about_table4}
 
 |-:|
-| <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. Given the constraints—fixed location for the first [0] and last [15] tasks and the smallest possible mesh for this graph [4x4]—the algorithm quickly found a good solution that is 6 hops away from the optimal (unconstrained) one. </span> |
+| <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. Given the constraints—fixed location for the first and last tasks [0 & 15] and the smallest possible mesh for this graph [4x4]—the algorithm quickly finds a good solution that is only 6 hops away from the optimal (unconstrained) one. </span> |
 {:.about_table4}
 
 |-:|
