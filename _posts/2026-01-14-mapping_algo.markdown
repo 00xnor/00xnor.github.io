@@ -158,22 +158,27 @@ non_top_performer = 0.7936948/209.486752 = ~0.379%
 {% endhighlight %}
 
 
-|-:|
-| <span style="font-size: 1px;"> .  </span> |
-{:.about_table4}
+
+
+
+![mapping](../images/non_linear_mapping.gif){:.image_right}
 
 |-:|
+| <span style="font-size: 1px;"> . </span> |
+{:.about_table6}
+
+|-:|
+| <span style="font-size: 35px;  color: #686a68; "> --------------------------------- </span> |
 | <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. Given the constraints—fixed location for the first and last tasks [0 & 15] and the smallest possible mesh for this graph [4x4]—the algorithm quickly finds a good solution that is only 6 hops away from the optimal (unconstrained) one. </span> |
-{:.about_table4}
+| <span style="font-size: 35px;  color: #686a68; "> --------------------------------- </span> |
+{:.about_table6}
 
 |-:|
 | <span style="font-size: 1px;"> .  </span> |
-{:.about_table4}
-
-![mapping](../images/non_linear_mapping.gif){:.center-image}
+{:.about_table6}
 
 |-:|
-| <span style="font-size: 1px;"> .  </span> |
+| <span style="font-size: 1px;"> . </span> |
 {:.about_table4}
 
 ---
