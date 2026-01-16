@@ -54,73 +54,56 @@ comments: false
 
 
 {% highlight python %}
-# Ant's path is constructed by randomly *choosing* hops.
-# Initially, the probabilities associated with the choices
-# are uniformly distributed. After each iteration, the 
-# top performer is allowed to inject bias into the
-# distribution, making it less uniform.
+# Ant's path is constructed by randomly choosing hops.
+# Initially, the probabilities are uniformly distributed.
 choices =       [c1, c2, ..., cN]
 probabilities = [p1, p2, ..., pN]
-Initially, normalized probabilities are:
+# After normalization:
 [p1, p2, ..., pN] = 1/N
 
-# After an iteration, certain choices, e.g. c1 and c2,
-# are part of the top performer's path so their
-# chances of being chosen again go up. 
+# After an iteration, hops in the top performer's
+# path (e.g., c1, c2) receive a probability boost.
 choices =       [c1,     c2,     ..., cN]
 probabilities = [p1 + x, p2 + x, ..., pN]
-After an iteration, normalized probabilities are:
+# After normalization:
 [p1, p2, ..., pN] = [p1 + x, p2 + x, ..., pN]/sum(P)
 
-# Knowing that the very first path was chosen randomly,
+# Since the first path was chosen randomly,
 # the probabilities shouldn't increase excessively.
-# I propose the following equation to control the bias:
+# A simple model with pheromone deposit and 
+# evaporation will do:
 deposit = AntHeuristicParams.PHERONOME_DEPOSIT
 rate = AntHeuristicParams.PHERONOME_EVAPORATION_RATE
 x = deposit + (1 - rate)*current_pheromone 
 
-# I chose the deposit to be 1.0 and evaporation rate
-# 0.247 or 24.7%. Numerically, after the iteration, 
-# each hop in the the top performer's path is 
-# biased as follows (subject to fine-tuning):
+# Using deposit = 1.0 and evaporation rate = 0.247:
+# For hops in the top performer's path:
 x = 1.0 + (1 - 0.247)*1.0 = 1.753
-# vs all the other hops
+# For other hops:
 x = (1 - 0.247)*1.0 = 0.753
 
-# These 'x' values contribute to the 'deviation' aspect 
-# of the heuristic. To provide guidance, the heuristic
-# integrates time and energy components and tries to 
-# minimize them as a measure of path's efficiency. 
-# Energy and time depend on the specific task and
-# the amount of data the task communicates.
-
-# Energy component
+# The heuristic also guides choices using energy and time.
+# Both components depend on the Manhattan distance:
 e_route = AntHeuristicParams.ENERGY_ROUTE_ONE_BYTE
 e_link = AntHeuristicParams.ENERGY_LINK_ONE_BYTE
-# dist = manhattan distance
 energy_per_byte = (dist + 1)*e_route + dist*e_link
-# amount of data to pass between hops
 n_bytes = dag.edges[edge]['weight']
 energy_per_transfer = n_bytes*energy_per_byte
 tau = 1/energy_per_transfer
 
-# Time component consists of computation time
-# and communication time
+# Time includes compute and communication:
 t_compute = dag.nodes[node]['weight']
 t_communicate = dag.edges[edge]['weight']*dist
 time_total = t_compute + t_communicate
 phi = 1/time_total 
 
-# The heuristic allows for relative adjustment
-# on what component matters more, if any.  
-# alpha (e.g. 0.2) is how much energy matters
-# beta  (e.g. 0.2) is how much time matters
-p = (tau**alpha)*(phi**beta)  
+# Weights alpha and beta adjust the importance of 
+# energy and time components respectively:
+p = (tau**alpha)*(phi**beta)
 
-# Numerically, heuristic for a hop with manhattan
-# distance 3 is calculated as follows (plugging in 
-# 1 femtojoule per byte for routing & linking and
-# a 128-bit bus @ 200MHz for communication):
+# Example calculation with dist=3, n_bytes=1024:
+# (plugging in 1 femtojoule per byte for communication
+# and a 128-bit bus @ 200MHz for communication):
 n_bytes = 1024
 dist = 3
 e_route = 1
@@ -132,28 +115,26 @@ t_compute = 290
 t_communicate = 320*3 = 960
 time_total = 290 + 960 = 1250
 phi = 1/1250 = 0.0008
-p = (0.000139509**0.2)*(0.0008**0.2) = 0.0406948
+p = (0.000139509**0.2)*(0.0008**0.2) = 0.0407
 
-# At the end of each iteration, 
-# pheromone is added to the heuristic.
-# For top performer edges:
-p = 0.0406948 + 1.753 = 1.7936948
-# For all others:
-p = 0.0406948 + 0.753 = 0.7936948
+# After adding pheromone bias:
+# Top performer edges:
+p = 0.0407 + 1.753 ≈ 1.7937
+# Others:
+p = 0.0407 + 0.753 ≈ 0.7937
 
-# And so the final probabilities after 
-# the first iteration for each hop would be:
-# (assuming a 4x4 mesh with 240 edges and
-# and the 19-edge graph from above)
-sum_of_all = 1.7936948*19 + 0.7936948*221 = 209.486752
-top_performer = 1.7936948/209.486752 = ~0.856%
-non_top_performer = 0.7936948/209.486752 = ~0.379%
+# Final probabilities after the first iteration 
+# (example for a 4x4 mesh / 240 edges and
+# a 19-edge graph from the above):
+sum_all = 1.7937*19 + 0.7937*221 ≈ 209.49
+prob_top = 1.7937 / 209.49 ≈ 0.856%
+prob_other = 0.7937 / 209.49 ≈ 0.379%
 
-# Sanity check
-19*0.856% + 221*0.379% = 100%
+# Sanity check: 
+19*0.856% + 221*0.379% ≈ 100%
 
-# Fine-tuning is left to the specific use-cases.
-# The algorithm simply iterates from this point on.
+# Fine-tuning is use-case dependent.
+# The algorithm simply iterates from here.
 {% endhighlight %}
 
 
