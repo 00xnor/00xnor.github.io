@@ -16,7 +16,7 @@ permalink: /about/
 ---
 
 |:-|
-| <span style="font-size: 16px;"> Hi, I'm an engineer with a decade of hands-on experience in silicon development, including early-stage development of an **AI inference accelerator** and full-cycle work on a **secure memory IC** from concept to delivery and certification. Some of the things I’ve been up to professionally: </span> |
+| <span style="font-size: 16px;"> Hi, I'm an engineer with a decade of hands-on experience in silicon development, including early-stage development of an **AI inference accelerator** and full-cycle work on a **secure memory IC** from concept to delivery and certification. I contribute by building prototypes that help stakeholders decide on new product commitments. Some things I’ve been up to professionally: </span> |
 {:.about_table3}
 
 ---
@@ -88,6 +88,7 @@ permalink: /about/
 | <span style="font-size: 16px;"> **Contributions to Standards** </span> |
 | <span style="font-size: 16px;"> [JEDEC: Serial NOR Security Hardware Abstraction Layer](https://www.jedec.org/standards-documents/docs/jesd261){:target="_blank"} (throughout the doc) </span> |
 | <span style="font-size: 16px;"> [TCG: DICE Attestation Architecture](https://trustedcomputinggroup.org/wp-content/uploads/DICE-Attestation-Architecture-Version-1.1-Revision-18_pub.pdf){:target="_blank"} (chapter 7) </span> |
+| <span style="font-size: 16px;"> [TCG: Cyber Resilient Module and Building Block Requirements](https://trustedcomputinggroup.org/wp-content/uploads/Cyber-Resilient-Module-and-Building-Block-Requirements-V1-R0.2_pub.pdf){:target="_blank"} (storage protection) </span> |
 {:.about_table3}
 
 ---
