@@ -69,7 +69,7 @@ probabilities = [p1 + x, p2 + x, ..., pN]
 [p1, p2, ..., pN] = [p1 + x, p2 + x, ..., pN]/sum(P)
 
 # Since the first path was chosen randomly,
-# the probabilities shouldn't increase excessively.
+# the boost shouldn't be excessive.
 # A simple model with pheromone deposit and 
 # evaporation will do:
 deposit = AntHeuristicParams.PHERONOME_DEPOSIT
@@ -77,13 +77,16 @@ rate = AntHeuristicParams.PHERONOME_EVAPORATION_RATE
 x = deposit + (1 - rate)*current_pheromone 
 
 # Using deposit = 1.0 and evaporation rate = 0.247:
-# For hops in the top performer's path:
+# The boost for for hops in the top performer's path:
 x = 1.0 + (1 - 0.247)*1.0 = 1.753
-# For other hops:
+# The boost for other hops:
 x = (1 - 0.247)*1.0 = 0.753
 
-# The heuristic also guides choices using energy and time.
-# Both components depend on the Manhattan distance:
+# In addition to keeping history of previous choices, 
+# path selection is also guided by the energy and time that 
+# it takes to travel a path. As part of the heuristic, 
+# both components depend on the Manhattan distance
+# between nodes in the hardware connectivity graph:
 e_route = AntHeuristicParams.ENERGY_ROUTE_ONE_BYTE
 e_link = AntHeuristicParams.ENERGY_LINK_ONE_BYTE
 energy_per_byte = (dist + 1)*e_route + dist*e_link
@@ -91,7 +94,6 @@ n_bytes = dag.edges[edge]['weight']
 energy_per_transfer = n_bytes*energy_per_byte
 tau = 1/energy_per_transfer
 
-# Time includes compute and communication:
 t_compute = dag.nodes[node]['weight']
 t_communicate = dag.edges[edge]['weight']*dist
 time_total = t_compute + t_communicate
@@ -123,22 +125,22 @@ p = 0.0407 + 1.753 ≈ 1.7937
 # Others:
 p = 0.0407 + 0.753 ≈ 0.7937
 
-# Final probabilities after the first iteration 
+# The final probabilities after the first iteration 
 # (example for a 4x4 mesh / 240 edges and
 # a 19-edge graph from the above):
 sum_all = 1.7937*19 + 0.7937*221 ≈ 209.49
 prob_top = 1.7937 / 209.49 ≈ 0.856%
 prob_other = 0.7937 / 209.49 ≈ 0.379%
 
-# Sanity check: 
+# In other words, the edges in the top performer's
+# path are only about half a percent likelier to be 
+# chosen in the next iteration (0.856-0.379=0.477%).
+
+# Sanity check:
 19*0.856% + 221*0.379% ≈ 100%
 
-# Fine-tuning is use-case dependent.
 # The algorithm simply iterates from here.
 {% endhighlight %}
-
-
-
 
 
 ![mapping](../images/non_linear_mapping.gif){:.image_right}
@@ -162,5 +164,3 @@ prob_other = 0.7937 / 209.49 ≈ 0.379%
 {:.about_table4}
 
 ---
-
-

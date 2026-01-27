@@ -19,7 +19,7 @@ toc:
         url: /highway_1/
   - title: Tech
     subfolderitems:    
-      - page: Evaluation Metric mAP
-        url: /mean_average_precision/
       - page: Mapping Algorithm
         url: /mapping_algo/
+      - page: Mean Average Precision
+        url: /mean_average_precision/
