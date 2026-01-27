@@ -21,3 +21,5 @@ toc:
     subfolderitems:    
       - page: Mapping Algorithm
         url: /mapping_algo/
+      - page: Evaluation Metric - mAP
+        url: /mean_average_precision/

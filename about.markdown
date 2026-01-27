@@ -22,7 +22,7 @@ permalink: /about/
 ---
 
 |:-|
-| <span style="font-size: 16px;"> **Systems Engineer**, Infineon Technologies, 2020-2025, San Jose, CA </span> |
+| <span style="font-size: 16px;"> **Lead Principal Engineer**, Infineon Technologies, 2020-2025, San Jose, CA </span> |
 {:.about_table3}
 
 |:-|
