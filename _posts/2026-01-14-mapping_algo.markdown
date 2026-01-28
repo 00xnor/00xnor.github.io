@@ -163,13 +163,13 @@ prob_other = 0.7937 / 209.49 ≈ 0.379%
 ---
 
 |-:|
-|  <span style="font-size: 22px;"> Tuning the Algorithm </span> |
+|  <span style="font-size: 22px;"> Provide Guidance But Allow Deviaton </span> |
 {:.about_table4}
 
 |-:|
 | <span style="font-size: 16px;"> The random component is what helps the algorithm explore new possibilities. Tweaking probabilities and seeing how the search evolves can be really engaging. To get the most out of this, I’d suggest using a live plot to watch the convergence in action. </span> |
-| <span style="font-size: 16px;"> The number of edges and probabilities is typically quite large. Tuning them individually is essentially equivalent to rule-based mapping. It's rather challenging. Much more manageable is working with edges grouped by length. Below is an example where the edges are grouped by Manhattan distance (bin 1=shortest edges, bin 16=longest edges). This makes it easier to see what type of edges the algorithm values as it iterates. </span> |
-| <span style="font-size: 16px;"> Once a certain pattern emerges, further bias can be applied to whole groups of edges instead of individual ones. For example, a uniform distribution means the algorithm values all edge lengths equally. But if the graph being mapped is linear, it makes sense to favor short edges much more than long ones. A function like radioactive decay can help achieve that. Namely, **y=exp(-x)** where **x** is the edge length can be mixed into the heuristic. It makes longer paths exponentially less likely to be chosen, essentially steering the algorithm towards more efficient paths. The animation below visualizes this first-order steering process. </span> |
+| <span style="font-size: 16px;"> The number of edges and probabilities is typically quite large. Tuning them individually is rather challenging and essentially not much different than rule-based mapping. Much more manageable is working with edges grouped by length. Below is an example where the edges are grouped by Manhattan distance (bin 1=shortest, bin 16=longest). This makes it easier to see what type of edges the algorithm values as it iterates. </span> |
+| <span style="font-size: 16px;"> Once a certain pattern emerges, further bias can be applied to whole groups of edges instead of individual ones. For example, a uniform distribution means the algorithm values all edge lengths equally. But if the graph being mapped is linear, it makes sense to favor short edges much more than long ones. A function like radioactive decay can help achieve that: **y=exp(-x)** where **x** is the edge length can be mixed into the heuristic. It makes longer paths exponentially less likely to be chosen, essentially steering the algorithm towards more efficient paths. The animation below shows this first-order steering process. </span> |
 | <span style="font-size: 1px;"> .  </span> |
 {:.about_table4}
 
