@@ -180,7 +180,7 @@ prob_other = 0.7937 / 209.49 ≈ 0.379%
 {:.about_table4}
 
 |-:|
-| <span style="font-size: 16px;"> It goes without saying that for complex graphs, such first-order biasing may not be nuanced enough. But as with many things in tech, it's a more of a tradeoff between computer time and human time, and perhaps less nuance coupled with more iterations yields better results. </span> |
+| <span style="font-size: 16px;"> It goes without saying that for complex graphs, such first-order biasing may not be nuanced enough. But as with many things in tech, it's a more of a tradeoff between computer time and human time. When human time is scarce, less nuance coupled with more iterations is not only pragmatic but could also be optimal. </span> |
 {:.about_table4}
 
 |-:|
