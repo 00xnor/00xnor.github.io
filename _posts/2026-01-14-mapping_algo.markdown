@@ -23,7 +23,7 @@ comments: false
 ![mapping](../images/linear_mapping.gif){:.image_right}
 
 |-:|
-| <span style="font-size: 16px;"> The animation <span style="font-size: 25px;"> → </span> features a linear graph being mapped onto a mesh, showing how the algorithm finds one of the **optimal** solutions. Linear graphs are well-suited for developing mapping intuition because the optimal solutions are known. In fact, the mapping for such graphs can be entirely rule-based, following the obvious up/down/left/right/stair/snake patterns. </span> |
+| <span style="font-size: 16px;"> The animation <span style="font-size: 20px;"> → </span> features a linear graph being mapped onto a mesh, showing how the algorithm finds one of the **optimal** solutions. Linear graphs are well-suited for developing mapping intuition because the optimal solutions are known. In fact, the mapping for such graphs can be entirely rule-based, following the obvious up/down/left/right/stair/snake patterns. </span> |
 | <span style="font-size: 16px;"> However, today's most prominent workloads are rarely linear. Regardless of what the term **workload** brings to mind—be it hyperscale/orchestration level, multi-agent, neural-network, or micro-op level like decomposition of conv2d into im2col and gemm—it is often a non-linear graph like the one below. Mapping patterns for such graphs aren't obvious, especially when the mapping space is constrained. </span> |
 {:.about_table6}
 
@@ -32,8 +32,8 @@ comments: false
 ![mapping](../images/graph.png){:.image_left}
 
 |-:|
-| <span style="font-size: 16px;"> Consider mapping this <span style="font-size: 25px;"> ← </span> non-linear task graph onto the smallest mesh it can fit into, a 4x4. Having a tight space means that every mapping decision directly impacts subsequent ones. This interdependence makes it challenging to construct a direct solution and apply it generally. </span> |
-| <span style="font-size: 35px;  color: #FF5733; "> ------------------------------------ </span> |
+| <span style="font-size: 16px;"> Consider mapping this <span style="font-size: 20px;"> ← </span> non-linear task graph onto the smallest mesh it can fit into, a 4x4. Having a tight space means that every mapping decision directly impacts subsequent ones. This interdependence makes it challenging to construct a direct solution and apply it generally. </span> |
+| <span style="font-size: 32px;  color: #FF5733; "> ------------------------------------ </span> |
 | <span style="font-size: 16px;"> More guided than a brute force search, yet not nearly as stringent as a direct solution is the iterative method. It integrates a **heuristic with stochastic elements** to navigate the search space and find satisfactory solutions, including optimal. And sometimes very quickly with proper biasing. But even without nuanced biasing, it's only a matter of time until a good solution emerges. </span> |
 {:.about_table7}
 
