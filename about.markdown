@@ -16,7 +16,7 @@ permalink: /about/
 ---
 
 |:-|
-| <span style="font-size: 16px;"> Hi, I'm an engineer with a decade of hands-on experience in silicon development, including early-stage development of an **AI inference accelerator** and full-cycle work on a **secure memory IC** from concept to delivery and certification. I contribute by building prototypes that help stakeholders decide on new product commitments. Some things I’ve been up to professionally: </span> |
+| <span style="font-size: 16px;"> Hi, I'm an engineer with a decade of hands-on experience in **silicon development**, including early-stage development of an AI inference accelerator and full-cycle work on a secure memory IC from concept to delivery and certification. I enjoy building prototypes that help stakeholders decide on new product commitments. Some things I’ve been up to professionally: </span> |
 {:.about_table3}
 
 ---
@@ -26,10 +26,12 @@ permalink: /about/
 {:.about_table3}
 
 |:-|
-● | <span style="font-size: 16px;"> in this role, I shaped the evaluation of an emerging in-memory compute technology by developing a graph compiler and using it as a primary vehicle for architecture exploration and tradeoff analysis </span> |
-● | <span style="font-size: 16px;"> for PPA analysis, I developed a heuristic-based algorithm to map a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-14-mapping_algo %}))<br> (neural network) → (distributed in-memory compute fabric) </span> |
-● | <span style="font-size: 16px;"> and finally to improve PPA, I defined graph transformations that enable neural network deployment under tight on-chip memory constraints; demonstrated results at JEDEC AI workshops </span> |
+● | <span style="font-size: 16px;"> In this role, I shaped the evaluation of an **analog in-memory compute technology**. I developed a graph compiler and used it as a primary vehicle for architecture exploration and tradeoff analysis. </span> |
+● | <span style="font-size: 16px;"> For PPA analysis, I developed a heuristic-based algorithm that maps a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-14-mapping_algo %})).<br> (neural network) <span style="font-size: 18px;"> → </span> (distributed in-memory compute fabric) </span> |
+● | <span style="font-size: 16px;"> I also focused on accuracy as a critical analog computing metric. To guide technology improvement, I defined specific memory array noise tolerances required to enable target applications ([**how**]({% post_url 2026-01-28-analog_computing_accuracy %})). </span> |
+● | <span style="font-size: 16px;"> And finally, I did a comprehensive comparison of the technology against leading AI accelerators ([**database**](https://nicsefc.ee.tsinghua.edu.cn/projects/neural-network-accelerator.html){:target="_blank"}) and presented my findings at a JEDEC AI workshop. </span> |
 {:.about_table5}
+
 
 ---
 
@@ -57,9 +59,9 @@ permalink: /about/
 {:.about_table3}
 
 |:-|
-● | <span style="font-size: 16px;"> in this role, I led a feasibility study for a secure memory [device](https://www.infineon.com/products/memories/nor-flash/semper-nor-flash-family/semper-secure-nor-flash){:target="_blank"}, analyzed and improved secure memory IP, and contributed to successful security certification ([CAVP](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/details?product=17774){:target="_blank"}, [CMVP](https://csrc.nist.gov/projects/cryptographic-module-validation-program/entropy-validations/certificate/165){:target="_blank"}) </span> |
-● | <span style="font-size: 16px;"> wrote a C model of a secure NOR Flash device to determine security aspects of the product itself, along with the systems it was intended to operate within (available in the [product SDK](https://softwaretools.infineon.com/tools/com.ifx.tb.tool.sempersdksecure){:target="_blank"}) </span> |
-● | <span style="font-size: 16px;"> coded apps, middleware and numerous drivers for demo purposes: MQTT, TLS, TCP/IP, WiFi, ETH, BLE, ... </span> |
+● | <span style="font-size: 16px;"> In this role, I led a feasibility study for a secure memory [device](https://www.infineon.com/products/memories/nor-flash/semper-nor-flash-family/semper-secure-nor-flash){:target="_blank"}, analyzed and improved secure memory IP, and contributed to successful security certification ([CAVP](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/details?product=17774){:target="_blank"}, [CMVP](https://csrc.nist.gov/projects/cryptographic-module-validation-program/entropy-validations/certificate/165){:target="_blank"}). </span> |
+● | <span style="font-size: 16px;"> Wrote a C model of a secure NOR Flash device to determine security aspects of the product itself, along with the systems it was intended to operate within (available in the [product SDK](https://softwaretools.infineon.com/tools/com.ifx.tb.tool.sempersdksecure){:target="_blank"}). </span> |
+● | <span style="font-size: 16px;"> Coded apps, middleware and numerous drivers for demo purposes: MQTT, TLS, TCP/IP, WiFi, ETH, BLE, ... </span> |
 {:.about_table5}
 
 ---
