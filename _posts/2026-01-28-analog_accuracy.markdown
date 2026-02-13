@@ -197,7 +197,7 @@ $$ X_{error} \sim N(\mu, \sigma^2) \qquad S = f^{noisy}(img) \qquad → \qquad \
 {:.about_table4}
 
 |:-|
-| <span style="font-size: 16px;"> Analog AP, coupled with the sensitivity analysis, helps transform qualitative observations into quantifiable, defensible conclusions, and ultimately decide on **the value of the power vs. computational accuracy tradeoff**. And given the huge potential for power savings, it's possible that some degree of analog computing will find its way into AI accelerators. </span> |
+| <span style="font-size: 16px;"> Analog AP, coupled with the sensitivity analysis, helps transform qualitative observations into quantifiable, defensible conclusions, and ultimately decide on **the value of the power vs. computational accuracy tradeoff**. And given the potential for huge power savings, it's possible that some degree of analog computing will find its way into AI accelerators. </span> |
 {:.about_table4}
 
 
