@@ -41,7 +41,7 @@ comments: false
 ---
 
 |-:|
-|  <span style="font-size: 22px;">  Don't Give Bad Randomness a Chance </span> |
+|  <span style="font-size: 22px;">  Give Good Randomness a Chance </span> |
 {:.about_table4}
 
 

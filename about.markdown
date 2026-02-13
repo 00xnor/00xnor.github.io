@@ -26,10 +26,10 @@ permalink: /about/
 {:.about_table3}
 
 |:-|
-● | <span style="font-size: 16px;"> In this role, I shaped the evaluation of an **analog in-memory compute technology**. I developed a graph compiler and used it as a primary vehicle for architecture exploration and tradeoff analysis. </span> |
+● | <span style="font-size: 16px;"> In this role, I shaped the evaluation of an **analog in-memory compute technology**. I developed a graph compiler as a primary vehicle for architecture exploration and tradeoff analysis. </span> |
 ● | <span style="font-size: 16px;"> For PPA analysis, I developed a heuristic-based algorithm that maps a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-14-mapping_algo %})).<br> (neural network) <span style="font-size: 18px;"> → </span> (distributed in-memory compute fabric) </span> |
-● | <span style="font-size: 16px;"> I also focused on accuracy as a critical analog computing metric. To guide technology improvement, I defined specific memory array noise tolerances required to enable target applications ([**how**]({% post_url 2026-01-28-analog_computing_accuracy %})). </span> |
-● | <span style="font-size: 16px;"> And finally, I did a comprehensive comparison of the technology against leading AI accelerators ([**database**](https://nicsefc.ee.tsinghua.edu.cn/projects/neural-network-accelerator.html){:target="_blank"}) and presented my findings at a JEDEC AI workshop. </span> |
+● | <span style="font-size: 16px;"> Formulated a nuanced approach for assessing analog accuracy beyond standard evaluation metrics ([**description**]({% post_url 2026-01-28-analog_accuracy %})). </span> |
+● | <span style="font-size: 16px;"> And finally, I did a comparison of the technology against leading [AI accelerators](https://nicsefc.ee.tsinghua.edu.cn/projects/neural-network-accelerator.html){:target="_blank"} and presented my findings at a JEDEC AI workshop. </span> |
 {:.about_table5}
 
 
