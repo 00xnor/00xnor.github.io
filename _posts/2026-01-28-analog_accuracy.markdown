@@ -183,11 +183,18 @@ $$ X_{error} \sim N(\mu, \sigma^2) \qquad S = f^{noisy}(img) \qquad → \qquad \
 
 
 |:-|
-| <span style="font-size: 16px;"> The generated plot uncovers a few key effects of analog noise. First, object localization is hardly affected by higher noise levels: the blue lines representing IoUs wobble around their initial levels. Second, the red lines representing confidence scores are concave down and steadily decreasing, reducing the confidence in proportion to noise levels. Though, the confidence is reduced across other classes as well and does not cause mispredictions. And third, harder-to-detect objects (smaller, blurry, overlapping) are more susceptible to noise, dropping below detection thresholds sooner. </span> |
+| <span style="font-size: 16px;"> The generated plot uncovers a few key effects of analog noise. First, object localization is hardly affected by higher noise levels: the blue lines representing IoUs wobble around their initial levels. Second, the red lines representing confidence scores are concave down and steadily decreasing, reducing the confidence in proportion to noise levels. Though, the confidence is reduced across other classes as well and this does not cause mispredictions. And third, harder-to-detect objects (smaller, blurry, overlapping) are more susceptible to noise, dropping below detection thresholds sooner. </span> |
 {:.about_table4}
 
+|-:|
+| <span style="font-size: 1px;"> . </span> |
+{:.about_table4}
 
 ![birds_no_birds](../images/birds_no_birds.gif){:.image_center}
+
+|-:|
+| <span style="font-size: 1px;"> . </span> |
+{:.about_table4}
 
 |:-|
 | <span style="font-size: 16px;"> Analog AP, coupled with the sensitivity analysis, helps transform qualitative observations into quantifiable, defensible conclusions, and ultimately decide on **the value of the power vs. computational accuracy tradeoff**. And given the huge potential for power savings, it's possible that some degree of analog computing will find its way into AI accelerators. </span> |
@@ -199,4 +206,8 @@ $$ X_{error} \sim N(\mu, \sigma^2) \qquad S = f^{noisy}(img) \qquad → \qquad \
 {:.about_table4}
 
 ---
+
+|-:|
+| <span style="font-size: 1px;"> . </span> |
+{:.about_table4}
 
