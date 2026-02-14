@@ -10,6 +10,11 @@ comments: false
 
 ---
 
+![sf_ride_seg](../images/sf_ride_seg.gif){:.center_gif}
+
+---
+
+
 |:-|
 | <span style="font-size: 16px;"> For workloads executing on analog compute fabrics, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, its value depends critically on **how fabric noise impacts solution accuracy**. </span> |
 | <span style="font-size: 16px;"> This page describes an evaluation approach that extends the standard [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP) by quantifying the effects of analog computing on image segmentation models, whose primary tasks are object localization (**identifying where objects are**) and classification (**identifying what objects are**). In standard evaluation, a model's detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, AP relies on a traditional binary classification process with four outcomes. </span> |
@@ -42,7 +47,7 @@ $$
 | <span style="font-size: 1px;"> . </span> |
 {:.about_table4}
 
-![dogs_no_dogs](../images/dogs_no_dogs.gif){:.image-center}
+![dogs_no_dogs](../images/dogs_no_dogs.gif){:.center_gif}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
@@ -135,10 +140,10 @@ $$ S = f^{noisy}(img) \qquad → \qquad \tilde{S} \sim D_{pushforward} $$
 
 <span style="font-size: 16px; color: #a82a2a; "></span> 
 
-![variable_scores](../images/variable_scores.gif){:.image_center}
+![variable_scores](../images/variable_scores.gif){:.center_gif}
 
 |:-|
-| <span style="font-size: 16px;"> To capture variability, $$ AP_{dog} $$ is computed repeatedly over many time points or PVT corners (snapshots of the animation above), yielding a set of $$ APs $$. These data points are then treated as any other statistical data: plotted and summarized using an appropriate MoT and MoV. </span> |
+| <span style="font-size: 16px;"> To capture variability, $$ AP_{dog} $$ is computed repeatedly over many time points or PVT corners (snapshots of the animation above), yielding multiple $$ APs $$. These data points are then treated as any other statistical data: plotted and summarized using appropriate measures of central tendency and variability. </span> |
 | <span style="font-size: 16px;"> With standard $$ AP $$, however, there's a risk of misclassifying random outcomes as true positives and true negatives when they happen to match the ground truth. To tease out these seemingly positive effects, I recommend a modification to the classification process: compare noisy detections against a combination of digital detections and ground truths. This refinement makes evaluation more rigorous, **prioritizing average consistency over occasional performance**. </span> |
 {:.about_table4}
 
@@ -190,7 +195,7 @@ $$ X_{error} \sim N(\mu, \sigma^2) \qquad S = f^{noisy}(img) \qquad → \qquad \
 | <span style="font-size: 1px;"> . </span> |
 {:.about_table4}
 
-![birds_no_birds](../images/birds_no_birds.gif){:.image_center}
+![birds_no_birds](../images/birds_no_birds.gif){:.center_gif}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
@@ -200,14 +205,15 @@ $$ X_{error} \sim N(\mu, \sigma^2) \qquad S = f^{noisy}(img) \qquad → \qquad \
 | <span style="font-size: 16px;"> <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span>, coupled with the sensitivity analysis, transforms observations into quantifiable, defensible conclusions, and ultimately **helps decide on the value of the power-accuracy tradeoff**. </span> |
 {:.about_table4}
 
-
 |-:|
 | <span style="font-size: 1px;"> . </span> |
 {:.about_table4}
 
 ---
 
+
 |-:|
 | <span style="font-size: 1px;"> . </span> |
 {:.about_table4}
+
 
