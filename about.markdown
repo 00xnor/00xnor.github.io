@@ -28,7 +28,7 @@ permalink: /about/
 |:-|
 ● | <span style="font-size: 16px;"> In this role, I shaped the evaluation of an **analog in-memory compute technology**. I developed a graph compiler as a primary vehicle for architecture exploration and tradeoff analysis. </span> |
 ● | <span style="font-size: 16px;"> For PPA analysis, I developed a heuristic-based algorithm that maps a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-14-mapping_algo %})).<br> (neural network) <span style="font-size: 18px;"> → </span> (distributed in-memory compute fabric) </span> |
-● | <span style="font-size: 16px;"> Formulated a nuanced approach for assessing analog accuracy beyond standard evaluation metrics ([**description**]({% post_url 2026-01-28-analog_accuracy %})). </span> |
+● | <span style="font-size: 16px;"> Formulated a nuanced approach for assessing accuracy of analog inference beyond standard evaluation metrics ([**description**]({% post_url 2026-01-28-analog_inference %})). </span> |
 ● | <span style="font-size: 16px;"> And finally, I did a comparison of the technology against leading [AI accelerators](https://nicsefc.ee.tsinghua.edu.cn/projects/neural-network-accelerator.html){:target="_blank"} and presented my findings at a JEDEC AI workshop. </span> |
 {:.about_table5}
 

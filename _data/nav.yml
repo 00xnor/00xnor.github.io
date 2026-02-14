@@ -3,5 +3,5 @@ toc:
     subfolderitems:    
       - page: Mapping Algorithm
         url: /mapping_algo/
-      - page: Analog Accuracy
-        url: /analog_accuracy/
+      - page: Analog Inference
+        url: /analog_inference/
