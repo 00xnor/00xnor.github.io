@@ -1,6 +1,6 @@
 ---
 layout: post
-date:   2026-01-28 00:00:00 -0800
+date:   2026-02-14 00:00:00 -0800
 group: Tech
 title: Analog Inference 
 permalink: /analog_inference/
