@@ -17,7 +17,7 @@ comments: false
 
 |:-|
 | <span style="font-size: 16px;"> For workloads executing on analog compute fabrics, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, its value depends critically on **how fabric noise impacts solution accuracy**. </span> |
-| <span style="font-size: 16px;"> This page describes an evaluation approach that extends the standard [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP) by quantifying the effects of analog computing in the context of image segmentation models. The primary task of these models is object detection, which combines object localization (**figuring out where it is**) and classification (**figuring out what it is**). Standard evaluation compares detections (DT) against ground truths (GT) from a validation dataset. At its core, AP relies on a traditional binary classification with four outcomes: </span> |
+| <span style="font-size: 16px;"> This page describes an evaluation approach that extends the standard [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP) by quantifying the effects of analog computing in the context of image segmentation models. The primary task of these models is object detection, which combines object localization (**figuring out where it is**) and classification (**figuring out what it is**). Standard evaluation compares detections (DT) against ground truths (GT) from a validation dataset. At its core, this is a traditional binary classification process with four outcomes: </span> |
 {:.about_table4}
 
 
@@ -30,18 +30,18 @@ $$
 $$
 
 |:-|
-| <span style="font-size: 16px;"> Add noise, and classification gets trickier: outcomes become variable. Standard AP is not designed to capture this variability, nor does it prevent random positive effects from cancelling out systemic negative ones. This calls for an extension to account for these dynamics. </span> |
+| <span style="font-size: 16px;"> Add noise, and this process gets trickier: outcomes become variable. Standard AP does not capture this variability. What's more, it even allows random positive effects to cancel out systemic negative ones. Yikes! Is this a slippery slope? Probably. The practical impact of this may vary, but having the tools to capture such dynamics is essential. </span> |
 {:.about_table4}
 
 ---
 
 |-:|
-|  <span style="font-size: 22px;"> But First, a Warm-Up 🐕‍🦺🦮🐩🐕🐶 </span> |
+|  <span style="font-size: 22px;"> First, a Warm-Up 🐕‍🦺🦮🐩🐕🐶 </span> |
 {:.about_table4}
 
 |:-|
 | <span style="font-size: 16px;"> Let's say there's a total of 50 dogs in the entire validation dataset spread across 100 images. Naturally, a trained model would generate low scores for images with no dogs, high scores for images with dogs, and medium scores for images with similar-looking animals. </span> |
-| <span style="font-size: 16px;"> The plot below represents a typical evaluation run with two distinct but overlapping distributions. The scores range from <span style="font-size: 16px; color: #a82a2a; "> **0.00 to 0.60** </span> for <span style="font-size: 16px; color: #a82a2a; "> **no dogs**</span> and from <span style="font-size: 16px;  color: #2b31fb; "> **0.35 to 1.00**</span> for <span style="font-size: 16px;  color: #2b31fb; "> **dogs**</span>. For a comprehensive evaluation, the scores are classified using multiple thresholds rather than a single one, to account for potential tradeoffs. And even though the middle region is where the action takes place, classification is performed across the entire scale, sweeping all the way from left to right. </span> |
+| <span style="font-size: 16px;"> The plot below represents a typical evaluation run with two distinct but overlapping distributions. The scores range from <span style="font-size: 16px; color: #a82a2a; "> **0.00 to 0.60** </span> for <span style="font-size: 16px; color: #a82a2a; "> **no dogs**</span> and from <span style="font-size: 16px;  color: #2b31fb; "> **0.35 to 1.00**</span> for <span style="font-size: 16px;  color: #2b31fb; "> **dogs**</span>. For a comprehensive evaluation, the scores are classified using multiple thresholds rather than a single one. And even though the middle region is where the action takes place, classification is performed across the entire scale, from far left to far right. </span> |
 {:.about_table4}
 
 
@@ -57,7 +57,7 @@ $$
 {:.about_table4}
 
 |:-|
-| <span style="font-size: 16px;"> To provide a concise numerical example, I make up prediction scores, cluster them at 10 confidence scores, and couple with an intersection over union (IoU) level in the table below (left). This allows a full sweep of the scale with only 11 evaluation thresholds, resulting in 11 binary classifications (right). Each classification yields a (TP, FP, FN, TN) set and is reduced to recall $$ (R) $$ and precision $$ (P) $$ ratios. The 11 precision ratios are further condensed into a single $$ AP $$ value using an appropriate measure of central tendency (MoT). This process is performed across 10 IoU thresholds resulting in 10 $$ AP_{dog\ @\ IoU} $$ values which are then averaged to get the final $$ AP_{dog} = \frac{1}{10} \sum AP_{dog\ @\ IoU} $$. </span> |
+| <span style="font-size: 16px;"> To provide a concise numerical example, I make up predictions, cluster them at 10 confidence scores, and couple with an intersection over union (IoU) level in the table below (left). This allows a full sweep of the scale with only 11 evaluation thresholds, resulting in 11 binary classifications (right). Each classification yields a (TP, FP, FN, TN) set and is reduced to recall $$ (R) $$ and precision $$ (P) $$ ratios. The 11 precision ratios are further condensed into a single $$ AP $$ value using an appropriate measure of central tendency (MoT). This process is performed across 10 IoU thresholds resulting in 10 $$ AP_{dog\ @\ IoU} $$ values which are then averaged to get the final $$ AP_{dog} = \frac{1}{10} \sum AP_{dog\ @\ IoU} $$. </span> |
 | <span style="font-size: 1px;"> . </span> |
 {:.about_table4}
 
@@ -198,8 +198,8 @@ $$ X_{error} \sim N(\mu, \sigma^2) \qquad S = f^{noisy}(img) \qquad → \qquad \
 
 
 |:-|
-| <span style="font-size: 16px;"> The results reveal three key effects of analog noise. First, object localization is largely unaffected by higher noise levels: the blue IoUs lines just wobble around their initial levels. Second, confidence scores decrease steadily with noise, following a concave-down trajectory. Though, this alone does not cause mispredictions as the confidence drops across other classes as well. And third, harder-to-detect objects (smaller, blurry, overlapping) are more susceptible to noise, falling below detection thresholds sooner. </span> |
-| <span style="font-size: 16px;"> The first two effects are likely discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. </span> |
+| <span style="font-size: 16px;"> The results reveal three key effects of analog noise. First, object localization is largely unaffected by higher noise levels: the blue IoUs lines just wobble around their initial levels. Second, confidence scores decrease steadily with noise, following a concave-down trajectory. Though, this alone does not cause mispredictions as the confidence drops across other classes as well. And third, objects that are generally harder to detect (smaller, blurry, overlapping) are more susceptible to noise, falling below detection thresholds sooner. </span> |
+| <span style="font-size: 16px;"> The first two effects are likely discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. To me, this is a clear sign that looking beyond summary statistics is worthwhile. Tedious? Yes. But luckily, AI agents don't complain... yet. </span> |
 {:.about_table4}
 
 |-:|
