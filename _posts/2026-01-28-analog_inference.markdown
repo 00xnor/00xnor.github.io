@@ -17,7 +17,7 @@ comments: false
 
 |:-|
 | <span style="font-size: 16px;"> For workloads executing on analog compute fabrics, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, its value depends critically on **how fabric noise impacts solution accuracy**. </span> |
-| <span style="font-size: 16px;"> This page describes an evaluation approach that extends the standard [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP) by quantifying the effects of analog computing on image segmentation models, whose primary tasks are object localization (**figuring out where it is**) and classification (**figuring out what it is**). In standard evaluation, a model's detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, AP relies on a traditional binary classification process with four outcomes. </span> |
+| <span style="font-size: 16px;"> This page describes an evaluation approach that extends the standard [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP) by quantifying the effects of analog computing on image segmentation models, whose primary tasks are object localization (**figuring out where it is**) and classification (**figuring out what it is**). In standard evaluation, model's detections (DT) are compared against ground truths (GT) from a validation dataset. And at its core, AP relies on a traditional binary classification process with four outcomes. </span> |
 {:.about_table4}
 
 $$
@@ -181,7 +181,7 @@ $$
 
 |:-|
 | <span style="font-size: 16px;"> <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> is a dense metric; some effects of analog computing may be buried or averaged out. A sensitivity analysis on individual images or object types can help uncover pain points that <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> might miss. </span> |
-| <span style="font-size: 16px;"> Below is an example of such analysis, sweeping across a noise parameter. Modeled as a normal distribution, the error caused by noise is added to MVM performed by the fabric. The animation increases error's standard deviation from 0.001 to 0.135, tacking IoUs and confidence scores for two objects: a small, blurry bird on the left and a large, clear bird on the right. </span> |
+| <span style="font-size: 16px;"> Below is an example of such analysis, sweeping across a noise parameter. Modeled as a normal distribution, the error caused by noise is added to MVMs performed by the fabric. The animation increases error's standard deviation from 0.001 to 0.135, tacking IoUs and confidence scores for two objects: a small, blurry bird on the left and a large, clear bird on the right. </span> |
 {:.about_table4}
 
 $$ X_{error} \sim N(\mu, \sigma^2) \qquad S = f^{noisy}(img) \qquad → \qquad \tilde{S} \sim D_{pushforward} $$
