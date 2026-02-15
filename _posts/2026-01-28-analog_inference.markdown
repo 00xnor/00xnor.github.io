@@ -17,7 +17,7 @@ comments: false
 
 |:-|
 | <span style="font-size: 16px;"> For workloads executing on analog compute fabrics, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, its value depends critically on **how fabric noise impacts solution accuracy**. </span> |
-| <span style="font-size: 16px;"> This page describes an evaluation approach that extends the standard [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP) by quantifying the effects of analog computing on image segmentation models, whose primary tasks are object localization (**identifying where objects are**) and classification (**identifying what objects are**). In standard evaluation, a model's detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, AP relies on a traditional binary classification process with four outcomes. </span> |
+| <span style="font-size: 16px;"> This page describes an evaluation approach that extends the standard [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP) by quantifying the effects of analog computing on image segmentation models, whose primary tasks are object localization (**figuring out where it is**) and classification (**figuring out what it is**). In standard evaluation, a model's detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, AP relies on a traditional binary classification process with four outcomes. </span> |
 {:.about_table4}
 
 $$
