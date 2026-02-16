@@ -17,7 +17,7 @@ comments: false
 
 |:-|
 | <span style="font-size: 16px;"> For workloads executing on analog compute fabrics, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, its value depends critically on **how fabric noise impacts end-to-end accuracy**. </span> |
-| <span style="font-size: 16px;"> This page describes an evaluation approach that tracks the effect of fabric noise through image segmentation models, whose primary tasks are **object localization** and **classification**. Extending the [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP), this approach quantifies the effects of analog computing on these tasks. </span> |
+| <span style="font-size: 16px;"> This page describes an evaluation approach that tracks the effects of fabric noise on image segmentation models, whose primary tasks are **object localization** and **classification**. Extending the [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP), this approach quantifies the impact of analog computing on both tasks. </span> |
 | <span style="font-size: 16px;"> In a standard evaluation, detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, this is a traditional binary classification process with four outcomes:  </span> |
 {:.about_table4}
 
@@ -208,26 +208,7 @@ $$
 
 |:-|
 | <span style="font-size: 16px;"> The results reveal three key effects of analog noise. First, object localization is largely unaffected by higher noise levels: the blue IoUs lines just wobble around their initial levels. Second, confidence scores decrease steadily with noise, following a concave-down trajectory. Though, this alone does not cause mispredictions as the confidence drops across other classes as well. And third, objects that are generally harder to detect (smaller, blurry, overlapping) are more susceptible to noise, falling below detection thresholds sooner. </span> |
-| <span style="font-size: 16px;"> The first two effects are likely discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. To me, this is a clear sign that looking beyond summary statistics is worthwhile. A bit tedious? Sure. But luckily, AI agents don't complain... yet. </span> |
-{:.about_table4}
-
-
-
-
----
-
-
-
-
-
-
-
-|-:|
-|  <span style="font-size: 22px;"> Tracking Intermediate Effects </span> |
-{:.about_table4}
-
-|:-|
-| <span style="font-size: 16px;">  </span> |
+| <span style="font-size: 16px;"> The first two effects are discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. To me, this is a clear sign that looking beyond summary statistics is not only worthwhile but necessary. Together, sensitivity analysis and <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> can more thoroughly assess end-to-end accuracy of segmentation models executed on an analog compute fabric, and ultimately help decide on the value of the power-accuracy tradeoff. </span> |
 {:.about_table4}
 
 
