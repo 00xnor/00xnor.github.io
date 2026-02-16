@@ -18,7 +18,7 @@ comments: false
 |:-|
 | <span style="font-size: 16px;"> For workloads executing on analog compute fabrics, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, its value depends critically on **how fabric noise impacts end-to-end accuracy**. </span> |
 | <span style="font-size: 16px;"> This page describes an evaluation approach that tracks the effects of fabric noise on image segmentation models, whose primary tasks are **object localization** and **classification**. Extending the [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP), this approach quantifies the impact of analog computing on both tasks. </span> |
-| <span style="font-size: 16px;"> In a standard evaluation, detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, this is a traditional binary classification process with four outcomes:  </span> |
+| <span style="font-size: 16px;"> In a standard evaluation, detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, this is a traditional binary classification process with four (true/false positive/negative) outcomes:  </span> |
 {:.about_table4}
 
 
@@ -31,7 +31,7 @@ $$
 $$
 
 |:-|
-| <span style="font-size: 16px;"> Add noise, and this process gets trickier: outcomes become variable. This effectively means that same detections may travel across TP, FP, FN, TN categories due to noise. This variability is not captured by AP. And while the practical impact may vary, capturing and quantifying such dynamics is essential. </span> |
+| <span style="font-size: 16px;"> Add noise, and this process gets trickier: outcomes become variable. This means that some detections may travel across TP, FP, FN, TN categories due to noise. This variability is not captured by AP. And while the practical impact may vary, capturing and quantifying such dynamics is essential. </span> |
 {:.about_table4}
 
 ---
@@ -110,7 +110,7 @@ $$ AP_{dog} = \frac{1}{10} \sum_{IoUs} AP_{dog\ @\ IoU} = 0.537 $$
 ---
 
 |:-|
-| <span style="font-size: 16px;"> $$ AP $$ addresses both localization and classification through calculations across IoUs and confidence thresholds, and is deemed sufficient for the evaluation of image segmentation models. But here comes the noise.</span> |
+| <span style="font-size: 16px;"> $$ AP $$ addresses both localization and classification through calculations across IoUs and confidence thresholds, and is deemed sufficient for evaluating image segmentation models. But here comes the noise.</span> |
 {:.about_table4}
 
 
@@ -147,7 +147,7 @@ $$ S = f^{noisy}(img) \qquad → \qquad \tilde{S} \sim D_{pushforward} $$
 ![variable_scores](../images/variable_scores.gif){:.center_gif}
 
 |:-|
-| <span style="font-size: 16px;"> To capture variability, $$ AP_{dog} $$ is computed repeatedly over many time points (snapshots of the animation above) and PVT corners, yielding multiple $$ APs $$. These data points are then treated as any other statistical data: plotted and summarized using appropriate measures of central tendency and variability. </span> |
+| <span style="font-size: 16px;"> To capture this variability, $$ AP_{dog} $$ is computed repeatedly over many time points (snapshots of the animation above) and PVT corners, yielding multiple $$ APs $$. These data points are then treated as any other statistical data: plotted and summarized using appropriate measures of central tendency and variability. </span> |
 | <span style="font-size: 16px;"> With standard $$ AP $$, however, there's a risk of misclassifying random outcomes as true positives and true negatives when they happen to match the ground truth. To tease out these seemingly positive effects, I recommend a modification to the traditional classification process: compare noisy detections against a combination of digital detections and ground truths. This refinement makes evaluation more rigorous, **prioritizing average consistency over occasional performance**. </span> |
 {:.about_table4}
 
@@ -207,8 +207,8 @@ $$
 
 
 |:-|
-| <span style="font-size: 16px;"> The results reveal three key effects of analog noise. First, object localization is largely unaffected by higher noise levels: the blue IoUs lines just wobble around their initial levels. Second, confidence scores decrease steadily with noise, following a concave-down trajectory. Though, this alone does not cause mispredictions as the confidence drops across other classes as well. And third, objects that are generally harder to detect (smaller, blurry, overlapping) are more susceptible to noise, falling below detection thresholds sooner. </span> |
-| <span style="font-size: 16px;"> The first two effects are discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. To me, this is a clear sign that looking beyond summary statistics is not only worthwhile but necessary. Together, sensitivity analysis and <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> can more thoroughly assess end-to-end accuracy of workloads executed on analog compute fabrics, and ultimately help decide on the value of the power-accuracy tradeoff. </span> |
+| <span style="font-size: 16px;"> The results reveal three key effects of analog noise. First, **object localization is largely unaffected** by higher noise levels: the blue IoUs lines just wobble around their initial levels. Second, **confidence scores decrease** steadily with noise, following a concave-down trajectory. Though, this alone does not cause mispredictions as the confidence drops across other classes as well. And third, objects that are generally harder to detect **(smaller, blurry, overlapping) are more susceptible** to noise, falling below detection thresholds sooner. </span> |
+| <span style="font-size: 16px;"> The first two effects are discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. To me, this is a clear sign that looking beyond summary statistics is worthwhile. Together, sensitivity analysis and <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> can more thoroughly assess end-to-end accuracy, and ultimately help decide on the value of the power-accuracy tradeoff. </span> |
 {:.about_table4}
 
 
