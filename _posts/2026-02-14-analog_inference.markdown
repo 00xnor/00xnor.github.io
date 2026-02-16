@@ -208,7 +208,7 @@ $$
 
 |:-|
 | <span style="font-size: 16px;"> The results reveal three key effects of analog noise. First, object localization is largely unaffected by higher noise levels: the blue IoUs lines just wobble around their initial levels. Second, confidence scores decrease steadily with noise, following a concave-down trajectory. Though, this alone does not cause mispredictions as the confidence drops across other classes as well. And third, objects that are generally harder to detect (smaller, blurry, overlapping) are more susceptible to noise, falling below detection thresholds sooner. </span> |
-| <span style="font-size: 16px;"> The first two effects are discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. To me, this is a clear sign that looking beyond summary statistics is not only worthwhile but necessary. Together, sensitivity analysis and <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> can more thoroughly assess end-to-end accuracy of segmentation models executed on an analog compute fabric, and ultimately help decide on the value of the power-accuracy tradeoff. </span> |
+| <span style="font-size: 16px;"> The first two effects are discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. To me, this is a clear sign that looking beyond summary statistics is not only worthwhile but necessary. Together, sensitivity analysis and <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> can more thoroughly assess end-to-end accuracy of workloads executed on analog compute fabrics, and ultimately help decide on the value of the power-accuracy tradeoff. </span> |
 {:.about_table4}
 
 
