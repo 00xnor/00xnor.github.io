@@ -148,7 +148,7 @@ $$ S = f^{noisy}(img) \qquad → \qquad \tilde{S} \sim D_{pushforward} $$
 
 |:-|
 | <span style="font-size: 16px;"> To capture this variability, $$ AP_{dog} $$ is computed repeatedly over many time points (snapshots of the animation above) and PVT corners, yielding multiple $$ APs $$. These data points are then treated as any other statistical data: plotted and summarized using appropriate measures of central tendency and variability. </span> |
-| <span style="font-size: 16px;"> With standard $$ AP $$, however, there's a risk of misclassifying random outcomes as true positives and true negatives when they happen to match the ground truth. To tease out these seemingly positive effects, I recommend a modification to the traditional classification process: compare noisy detections against a combination of digital detections and ground truths. This refinement makes evaluation more rigorous, **prioritizing average consistency over occasional performance**. </span> |
+| <span style="font-size: 16px;"> With standard $$ AP $$, however, there's a risk of classifying random outcomes as true positives and true negatives when they happen to match the ground truth. To tease out these seemingly positive effects, I recommend a modification to the traditional classification process: compare noisy detections against a combination of digital detections and ground truths. This refinement makes evaluation more rigorous, **prioritizing average consistency over occasional performance**. </span> |
 {:.about_table4}
 
 |-:|
