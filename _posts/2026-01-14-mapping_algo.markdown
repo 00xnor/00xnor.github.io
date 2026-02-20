@@ -1,6 +1,7 @@
 ---
 layout: post
 date:   2026-01-14 00:00:00 -0800
+author: Sergey Ostrikov
 group: Tech
 title: Mapping Algorithm for Distributed Computing
 permalink: /mapping_algo/

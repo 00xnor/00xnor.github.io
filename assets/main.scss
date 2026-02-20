@@ -209,6 +209,222 @@
 }
 
 
+.about_table9
+{
+    border-collapse: collapse;
+    width: 48%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.about_table30
+{
+    border-collapse: collapse;
+    width: 30%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.about_table72
+{
+    border-collapse: collapse;
+    width: 72%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.about_table58
+{
+    border-collapse: collapse;
+    width: 58%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+.about_table51
+{
+    border-collapse: collapse;
+    width: 51%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.about_table55
+{
+    border-collapse: collapse;
+    width: 55%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.about_table55r
+{
+    border-collapse: collapse;
+    width: 55%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: right;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+.about_table28
+{
+    border-collapse: collapse;
+    width: 28%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+
+
+
+.about_table65
+{
+    border-collapse: collapse;
+    width: 65%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
 .image_left 
 {
   float: left;
@@ -225,6 +441,18 @@
 {
   float: right;
   padding: 3px;
+}
+
+.image_right2
+{
+  float: right;
+  padding: 8px;
+}
+
+.image_right3
+{
+  float: right;
+  padding: 14px;
 }
 
 tr:hover:nth-child(odd) 

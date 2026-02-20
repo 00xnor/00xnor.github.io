@@ -5,3 +5,8 @@ toc:
         url: /mapping_algo/
       - page: Analog Inference
         url: /analog_inference/
+  - title: Cycling Adventures
+    subfolderitems:    
+      - page: 🇹🇼 Taipei → Kaohsiung
+        url: /taipei_kaohsiung/
+

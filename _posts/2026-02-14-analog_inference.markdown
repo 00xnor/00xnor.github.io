@@ -1,6 +1,7 @@
 ---
 layout: post
 date:   2026-02-14 00:00:00 -0800
+author: Sergey Ostrikov
 group: Tech
 title: Analog Inference 
 permalink: /analog_inference/
@@ -15,9 +16,10 @@ comments: false
 ---
 
 
+
 |:-|
 | <span style="font-size: 16px;"> For workloads executing on analog compute fabrics, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, its value depends critically on **how fabric noise impacts end-to-end accuracy**. </span> |
-| <span style="font-size: 16px;"> This page describes an evaluation approach that tracks the effects of fabric noise on image segmentation models, whose primary tasks are **object localization** and **classification**. Extending the [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP), this approach quantifies the impact of analog computing on both tasks. </span> |
+| <span style="font-size: 16px;"> This page describes an evaluation approach that tracks the effects of fabric noise on image segmentation models, whose primary tasks are **object localization** and **classification**. Extending the [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP), this approach captures and quantifies the impact of noise on both of these tasks. </span> |
 | <span style="font-size: 16px;"> In a standard evaluation, detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, this is a traditional binary classification process with four (true/false positive/negative) outcomes:  </span> |
 {:.about_table4}
 
@@ -31,7 +33,7 @@ $$
 $$
 
 |:-|
-| <span style="font-size: 16px;"> Add noise, and this process gets trickier: outcomes become variable. This means that some detections may travel across TP, FP, FN, TN categories due to noise. This variability is not captured by AP. And while the practical impact may vary, capturing and quantifying such dynamics is essential. </span> |
+| <span style="font-size: 16px;"> Add noise, and this process gets trickier: outcomes become variable. This means that some detections may travel across the TP, FP, FN, TN categories due to noise. This variability is not captured by AP. And while the practical impact may vary, capturing and quantifying such dynamics is essential. </span> |
 {:.about_table4}
 
 ---
