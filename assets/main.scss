@@ -351,6 +351,28 @@
     }
 }
 
+.about_table57
+{
+    border-collapse: collapse;
+    width: 57%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
 
 .about_table55r
 {
@@ -423,7 +445,28 @@
     }
 }
 
+.about_table62
+{
+    border-collapse: collapse;
+    width: 62%;
 
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
 
 
 
