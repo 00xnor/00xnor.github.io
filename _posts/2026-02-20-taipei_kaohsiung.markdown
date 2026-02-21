@@ -17,7 +17,7 @@ comments: false
 ![cycling_taiwan](../images/cycling_taiwan.png){:.image_right2}
 
 |-:|
-| <span style="font-size: 16px;"> 🚴: [Strava](https://www.strava.com/activities/16727548624){:target="_blank"} &nbsp;&nbsp;&nbsp; 🎧: [Coulou](https://youtu.be/mfU825Pg9k8?t=3389){:target="_blank"} </span> |
+| <span style="font-size: 16px;"> 🚴: [Strava](https://www.strava.com/activities/16727548624){:target="_blank"} 🎧: [Coulou](https://youtu.be/mfU825Pg9k8?t=3389){:target="_blank"} </span> |
 | <span style="font-size: 16px;"> Empty streets, foreign country, tailwind: my trusty Cannondale and I are soaring. This is a night ride.  </span> |
 | <span style="font-size: 16px;"> I left Taipei at 10 PM. </span> |
 | <span style="font-size: 16px;"> Up close: the hum of my tires, the whir of the chain, and the warm, balmy air rushing past. From afar: a hardly noticeable, throbbing light travelling through the vast darkness, loosely following [環島1號線](https://en.wikipedia.org/wiki/Taiwan_Cycling_Route_No.1){:target="_blank"}, Taiwan's Cycling Route #1. </span> |
@@ -43,7 +43,7 @@ comments: false
 
 
 |-:|
-| <span style="font-size: 16px;"> Past 100mi the ride no longer feels like soaring, but also far from grinding. Rolling through a town asleep, I hear how loud the spring-loaded pawls become, rapidly snapping into the ratchet teeth. Click, click, click, click, click, click, click, click, click, click, click, click, click, click, click, click, click, click, click. I catch myself pedaling quieter, marveling at an old temple, its weathered grace. Unclipping into complete silence, the air smells of incense and damp stone. This is my halfway point. Another town I'll never know by daylight, not in this way. </span> |
+| <span style="font-size: 16px;"> Past 100mi the ride no longer feels like soaring, but also far from grinding. Rolling through a town asleep, I hear how loud the spring-loaded pawls become, rapidly snapping into the ratchet teeth. Click, click, click, click, click, click, click, click, click, click, click, click, click, click, click, click, click, click, click. I catch myself pedaling quieter, marveling at an old temple, its weathered grace. Unclipping into complete silence, the air smells of incense and damp stone. This is my halfway point. Another town I'll never know by daylight. Not in this way. </span> |
 {:.about_table55}
 
 ---
