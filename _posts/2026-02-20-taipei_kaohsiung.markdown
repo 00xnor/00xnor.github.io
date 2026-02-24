@@ -43,7 +43,7 @@ comments: false
 
 
 |-:|
-| <span style="font-size: 16px;"> Past 100mi the ride no longer feels like soaring, but also far from grinding. Rolling through a town asleep, I hear how loud the spring-loaded pawls become, rapidly snapping into the ratchet teeth. <span style="font-size: 16px; color: #000000; "> **CLICK, CLICK, CLICK, CLICK**</span>, <span style="font-size: 16px; color: #000000; ">**click, click, click, click, click, click, click, click, click**</span>, <span style="font-size: 16px; color: #000000; ">click, click, click, click</span>. I catch myself pedaling quieter, marveling at an old temple, its weathered grace. I press the brakes and unclip into complete silence. The air smells of incense and damp stone. This is my halfway point. Another town I'll never know by daylight. Not in this way. </span> |
+| <span style="font-size: 16px;"> Past 100mi the ride no longer feels like soaring, but also far from grinding. Rolling through a town asleep, I hear how loud the spring-loaded pawls become, rapidly snapping into the ratchet teeth. **CLICK, CLICK, CLICK, CLICK, click, click, click, click, click, click, click, click, click**, click, click, click, click, click, click. I catch myself pedaling quieter, marveling at an old temple, its weathered grace. Pressing the brakes, I unclip into complete silence. This is my halfway point. Another town I'll never know by daylight. Not in this way. </span> |
 {:.about_table55}
 
 ---
