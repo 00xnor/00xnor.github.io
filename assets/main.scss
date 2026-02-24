@@ -256,6 +256,28 @@
     }
 }
 
+.about_table38
+{
+    border-collapse: collapse;
+    width: 38%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 4px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
 
 .about_table72
 {
@@ -483,6 +505,13 @@
 {
   float: left;
   padding: 8px;
+}
+
+
+.image_left3 
+{
+  float: left;
+  padding: 15px;
 }
 
 .image_right 
