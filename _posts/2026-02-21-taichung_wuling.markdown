@@ -13,4 +13,4 @@ comments: false
 ---
 
 ![train](../images/train.gif){:.image_right3}
-![wuling](../images/wuling.png){:.image_left3}
+![wuling](../images/wuling.png){:.image_left2}
