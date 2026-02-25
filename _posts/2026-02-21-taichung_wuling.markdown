@@ -27,7 +27,7 @@ comments: false
 ---
 
 |-:|
-| <span style="font-size: 16px;"> Not. So. Fast. Cowboy. Ten minutes into the ride, my water bottle bounces into the bushes. I hop off my bike to look for it and find I've got a flat, too. </span> |
+| <span style="font-size: 16px;"> Not. So. Fast. Cow. Boy. Ten minutes into the ride, my water bottle bounces into the bushes. I hop off my bike to look for it and find I've got a flat, too. </span> |
 {:.responsive-table}
 
 
@@ -66,7 +66,7 @@ comments: false
 ---
 
 |-:|
-| <span style="font-size: 16px;"> Not. So. Fast. Cowboy. Gotta wash my hands first. That out of the way, ahead of me is a sloooooooooow grind: 25 miles with a 6.5% average grade. Takes me five hours to reach Wuling Pass. But here I am, looking at the sea of clouds. And the frost on the handrail. Frost in Taiwan! </span> |
+| <span style="font-size: 16px;"> Not. So. Fast. Cow. Boy. Gotta wash my hands first. That out of the way, ahead of me is a sloooooooooow grind: 25 miles with a 6.5% average grade. Takes me five hours to reach Wuling Pass. But here it is, the sea of clouds (雲海). And the frost on the handrail. Frost in Taiwan... </span> |
 {:.responsive-table}
 
 
@@ -81,14 +81,16 @@ comments: false
 ![3275](../images/wuling_pass/3275.png){:.float-left}
 
 |-:|
-| <span style="font-size: 16px;"> Concerned about turning into an icicle on the way down, I pull two pairs of plastic food handling gloves from my pocket. I got them at 7-Eleven. Along with two rubber bands to keep the air out. The plan is to [Roll Safe](https://en.wikipedia.org/wiki/Roll_Safe){:target="_blank"}. </span> |
+| <span style="font-size: 16px;"> Concerned about turning into a popsicle on the way down, I pull two pairs of plastic food handling gloves from my pocket. I got them at 7-Eleven. Along with two rubber bands to keep the air out. The plan is to [Roll Safe](https://en.wikipedia.org/wiki/Roll_Safe){:target="_blank"}. </span> |
 | <span style="font-size: 16px;"> Climbing is fun. Rolling downhill for 70 miles: terrifying. It is too steep and cold to have my phone out. Such a shame I don't have my GoPro with me either, because the 30 miles back to Puli is a visual journey. </span> |
 | <span style="font-size: 16px;"> Back in Puli, I take off my windbreaker. The air is warmer, the ground flatter. Feels strange to be back. The last 40 miles is a slight downhill back to Taichung where my journey began. A gradual return to civilization. More lights, more traffic, and finally trains again. </span> |
 {:.responsive-table}
 
 ---
 
+
 ![hsr](../images/wuling_pass/hsr.png){:.float-right}
+
 
 
 
