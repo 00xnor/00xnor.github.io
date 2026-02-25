@@ -16,34 +16,34 @@ comments: false
 | <span style="font-size: 16px;"> For workloads executing on distributed compute fabrics, performance is often limited by data movement rather than computation. As a result, efficient execution depends critically on how the workload is partitioned and **placed across hardware resources**. </span> |
 | <span style="font-size: 16px;"> This page describes an algorithm I developed ([**code**](https://github.com/00xnor/mapping_algo){:target="_blank"}) for distributed systems that maps a task graph onto a hardware connectivity graph. The task graph captures computation and communication dependencies, while the hardware graph represents compute elements and their physical interconnects. The algorithm automatically explores a large search space through an iterative process and converges to communication-efficient task assignments while respecting dependency constraints.  </span> |
 | <span style="font-size: 16px;"> Based on [**Ant Colony Optimization**](https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms){:target="_blank"}, the algorithm sends out a group of ants to explore possible paths through the hardware graph. Initially, paths are selected randomly, but over iterations selection becomes biased towards more efficient paths. To guide path selection, top-performing ants leave trails where they travel. And to avoid local minima, the trails that aren’t reinforced by top runners gradually fade away. Over time, the system converges on good solutions without exhaustively exploring every possibility. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 ---
 
-![mapping](../images/linear_mapping.gif){:.image_right}
+![mapping](../images/mapping_algo/linear_mapping.gif){:.float-right}
 
 |-:|
 | <span style="font-size: 16px;"> The animation <span style="font-size: 20px;"> → </span> features a linear graph being mapped onto a mesh, showing how the algorithm finds one of the **optimal** solutions. Linear graphs are well-suited for developing mapping intuition because the optimal solutions are known. In fact, the mapping for such graphs can be entirely rule-based, following the obvious up/down/left/right/stair/snake patterns. </span> |
 | <span style="font-size: 16px;"> However, today's most prominent workloads are rarely linear. Regardless of what the term **workload** brings to mind—be it hyperscale/orchestration level, multi-agent, neural-network, or micro-op level like decomposition of conv2d into im2col and gemm—it is often a non-linear graph like the one below. Mapping patterns for such graphs aren't obvious, especially when the mapping space is constrained. </span> |
-{:.about_table6}
+{:.responsive-table}
 
 ---
 
-![mapping](../images/graph.png){:.image_left}
+![mapping](../images/mapping_algo/graph.png){:.float-left}
 
 |-:|
 | <span style="font-size: 16px;"> Consider mapping this <span style="font-size: 20px;"> ← </span> non-linear task graph onto the smallest mesh it can fit into, a 4x4. Having a tight space means that every mapping decision directly impacts subsequent ones. This interdependence makes it challenging to construct a direct solution and apply it generally. </span> |
 | <span style="font-size: 32px;  color: #FF5733; "> ------------------------------------ </span> |
 | <span style="font-size: 16px;"> More guided than a brute force search, yet not nearly as stringent as a direct solution is the iterative method. It integrates a **heuristic with stochastic elements** to navigate the search space and find satisfactory solutions, including optimal. And sometimes very quickly with proper biasing. But even without nuanced biasing, it's only a matter of time until a good solution emerges. </span> |
-{:.about_table7}
+{:.responsive-table}
 
 
 ---
 
 |-:|
 |  <span style="font-size: 22px;">  Give Good Randomness a Chance </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 |:-|
@@ -51,7 +51,7 @@ comments: false
 | <span style="font-size: 16px;"> This entire process represents an algorithm's iteration—a single <span style="font-size: 16px;  color: #a82a2a; "> **Ant Colony** </span> run. During the very first run, the <span style="font-size: 16px;  color: #a82a2a; "> **Ants** </span> are unbiased. This means one <span style="font-size: 16px;  color: #a82a2a; "> **randomly** </span> happens to find a more efficient path than the others. Just like in any competition, the winner gets to brag about how it did it: “I started in the top left, moved right, then down…” You get the idea. Having listened to the winner, the next <span style="font-size: 16px;  color: #a82a2a; "> **Ant Colony** </span> run becomes slightly biased towards the <span style="font-size: 16px;  color: #a82a2a; "> **randomly** </span> chosen path. This is good randomness though, as it produced the best result so far. </span> |
 | <span style="font-size: 16px;"> To keep producing improvements, the <span style="font-size: 16px;  color: #a82a2a; "> **heuristic** </span> ought to maintain  just the right conditions for randomness to work its magic: providing guidance but also allowing deviaton. Here's how this is done in practice: </span> |
 | <span style="font-size: 16px;">  </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 
@@ -147,49 +147,49 @@ prob_other = 0.7937 / 209.49 ≈ 0.379%
 {% endhighlight %}
 
 
-![mapping](../images/non_linear_mapping.gif){:.image_right}
+![mapping](../images/mapping_algo/non_linear_mapping.gif){:.float-right}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table6}
+{:.responsive-table}
 
 |-:|
 | <span style="font-size: 35px;  color: #686a68; "> --------------------------------- </span> |
 | <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. Given the constraints—fixed location for the first and last tasks [0 & 15], and the smallest possible mesh for this graph [4x4]—the algorithm quickly finds a good solution that is only 6 hops away from the optimal (unconstrained) one. </span> |
 | <span style="font-size: 35px;  color: #686a68; "> --------------------------------- </span> |
-{:.about_table6}
+{:.responsive-table}
 
 |-:|
 | <span style="font-size: 1px;"> .  </span> |
-{:.about_table6}
+{:.responsive-table}
 
 
 ---
 
 |-:|
 |  <span style="font-size: 22px;"> Guide The Algorithm </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |-:|
 | <span style="font-size: 16px;"> The random component is what helps the algorithm explore new possibilities. Tweaking probabilities and seeing how the search evolves can be really engaging. To get the most out of this, I recommend using a live plot to watch the convergence in action. </span> |
 | <span style="font-size: 16px;"> The number of individual edges and probabilities is typically quite large. Tuning them one by one is rather challenging and essentially not much different than rule-based mapping. Much more manageable is working with edges when they are grouped. Below is an example where the edges are grouped by Manhattan distance (bin 1=shortest, bin 16=longest). Grouping makes it easier to see what the algorithm values as it iterates. </span> |
 | <span style="font-size: 16px;"> Once a pattern emerges, further bias can be applied to whole groups of edges instead of individual ones. For example, a uniform distribution means the algorithm values all edge lengths equally. But if the graph is linear, it makes sense to favor short edges much more than long ones. A function like radioactive decay can help achieve that: $$ y = e^{-\text{edge_length}} $$ can be mixed into the heuristic. It makes longer paths exponentially less likely to be chosen, essentially steering the algorithm towards more efficient paths. The animation below shows this first-order steering process. </span> |
 | <span style="font-size: 1px;"> .  </span> |
-{:.about_table4}
+{:.responsive-table}
 
-![biasing](../images/biasing.gif){:.image-center}
+![biasing](../images/mapping_algo/biasing.gif){:.image-center}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |-:|
 | <span style="font-size: 16px;"> For complex graphs, such first-order steering may not seem nuanced enough. But as with many things tech, it's more of a tradeoff between computer time and human time, and a bit of guidance goes a long way. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 ---
 

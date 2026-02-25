@@ -4,6 +4,11 @@
 
 @import "minima";
 
+// ============================================
+// SINGLE TABLE CLASS THAT ADAPTS TO CONTEXT
+// ============================================
+
+
 .center_gif {
   padding: inherit;
   margin:auto;
@@ -22,16 +27,19 @@
   padding: 45px;
 }
 
-.about_table 
-{
+
+
+
+
+.about_table {
     border-collapse: collapse;
-    width: 40%;
+    width: auto;
+    min-width: 100%;
 
     > table, td, th 
     {
         border-color: transparent;
-        padding: 4px;
-        text-align: left;
+        padding: 8px;
     }
 
     tr:nth-child(odd) 
@@ -45,76 +53,7 @@
     }
 }
 
-.about_table2
-{
-    border-collapse: collapse;
-    width: 75%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 4px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table3
-{
-    border-collapse: collapse;
-    width: 88%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 4px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table4
-{
-    border-collapse: collapse;
-    width: 100%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 4px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table5
+.about_table66
 {
     border-collapse: collapse;
     width: 66%;
@@ -137,11 +76,10 @@
     }
 }
 
-
-.about_table6
+.about_table88
 {
     border-collapse: collapse;
-    width: 52%;
+    width: 88%;
 
     > table, td, th 
     {
@@ -161,7 +99,80 @@
     }
 }
 
-.about_table7
+.about_table55r {
+    border-collapse: collapse;
+    width: auto;
+    min-width: 55%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: right;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+ 
+}
+
+
+
+.about_table38 {
+    border-collapse: collapse;
+    width: auto;
+    min-width: 26%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+
+}
+
+
+.about_table50
+{
+    border-collapse: collapse;
+    width: 50%;
+
+    > table, td, th 
+    {
+        border-color: transparent;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) 
+    {
+        background: #fcfefb;
+    }
+
+    tr:nth-child(even) 
+    {
+        background: #fcfefb;
+    }
+}
+
+.about_table56
 {
     border-collapse: collapse;
     width: 56%;
@@ -185,352 +196,51 @@
 }
 
 
-.about_table8 
-{
-    border-collapse: collapse;
-    width: 40%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 4px;
-        text-align: left;
+.responsive-table {
+  border-collapse: collapse;
+  width: auto;
+  min-width: 250px;
+  max-width: 100%;
+  
+  table, td, th {
+    border-color: transparent;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  tr:nth-child(odd),
+  tr:nth-child(even) {
+    background: #fcfefb;
+  }
+  
+  @media (min-width: 769px) {
+    .float-left + &,
+    .float-right + & {
+      width: calc(100% - 320px);
     }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
+    
+    .float-left + & {
+      float: right;
     }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
+    
+    .float-right + & {
+      float: left;
     }
+  }
+  
+  @media (max-width: 768px) {
+    width: 100% !important;
+    float: none !important;
+    clear: both;
+  }
 }
 
-
-.about_table9
-{
-    border-collapse: collapse;
-    width: 48%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 4px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
+.responsive-table.text-right {
+  table, td, th {
+    text-align: right;
+  }
 }
 
-
-.about_table30
-{
-    border-collapse: collapse;
-    width: 30%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 4px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table38
-{
-    border-collapse: collapse;
-    width: 38%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 4px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table72
-{
-    border-collapse: collapse;
-    width: 72%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 8px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-
-.about_table58
-{
-    border-collapse: collapse;
-    width: 58%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 8px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table49
-{
-    border-collapse: collapse;
-    width: 49%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 8px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-
-.about_table55
-{
-    border-collapse: collapse;
-    width: 55%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 8px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table57
-{
-    border-collapse: collapse;
-    width: 57%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 8px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table55r
-{
-    border-collapse: collapse;
-    width: 55%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 8px;
-        text-align: right;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-
-.about_table28
-{
-    border-collapse: collapse;
-    width: 28%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 4px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-
-.about_table65
-{
-    border-collapse: collapse;
-    width: 65%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 8px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-.about_table62
-{
-    border-collapse: collapse;
-    width: 62%;
-
-    > table, td, th 
-    {
-        border-color: transparent;
-        padding: 8px;
-        text-align: left;
-    }
-
-    tr:nth-child(odd) 
-    {
-        background: #fcfefb;
-    }
-
-    tr:nth-child(even) 
-    {
-        background: #fcfefb;
-    }
-}
-
-
-
-
-
-
-.image_left 
-{
-  float: left;
-  padding: 18px;
-}
-
-.image_left2 
-{
-  float: left;
-  padding: 8px;
-}
-
-
-.image_left3 
-{
-  float: left;
-  padding: 15px;
-}
-
-.image_right 
-{
-  float: right;
-  padding: 3px;
-}
-
-.image_right2
-{
-  float: right;
-  padding: 8px;
-}
-
-.image_right3
-{
-  float: right;
-  padding: 14px;
-}
 
 tr:hover:nth-child(odd) 
 {
@@ -548,13 +258,154 @@ body, html, .body {
 }
 
 
+// ============================================
+// SIMPLIFIED IMAGE SYSTEM
+// Just 3 classes for all your needs!
+// ============================================
+
+// Base image styles
+img, gif {
+  max-width: 100%;
+  height: auto;
+}
+
+// FLOATING IMAGES (for desktop)
+.float-left, .float-right {
+  // Remove the max-width constraint - let images be their natural size
+  // max-width: 280px; // <-- REMOVE THIS LINE
+  
+  @media (min-width: 769px) {
+    margin-bottom: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    float: none !important;
+    display: block !important;
+    margin: 20px auto !important;
+    max-width: 90% !important; // Only constrain on mobile
+  }
+}
+
+// Left-floated images on desktop
+.float-left {
+  @media (min-width: 769px) {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+// Right-floated images on desktop
+.float-right {
+  @media (min-width: 769px) {
+    float: right;
+    margin-left: 24px;
+  }
+}
+
+// Optional: Add a size modifier for when you DO want to constrain
+.float-left.compact, .float-right.compact {
+  @media (min-width: 769px) {
+    max-width: 280px; // Only constrain when you explicitly add .compact
+  }
+}
+
+// CENTERED IMAGES (standalone)
+.center-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  
+  @media (min-width: 769px) {
+    max-width: 80%; // This one can stay - it's for centered images
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+}
+
+// For small decorative images (like icons)
+.small-image {
+  max-width: 100px;
+  
+  @media (min-width: 769px) {
+    &.float-left {
+      margin-right: 16px;
+    }
+    
+    &.float-right {
+      margin-left: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 80px;
+  }
+}
+
+// For multiple images in a row
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+  
+  > img, > gif {
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    
+    > img, > gif {
+      max-width: 90%;
+      margin: 10px auto;
+    }
+  }
+}
+
+
+// ============================================
+// PADDING VARIANTS (if you really need them)
+// If you need different spacing, use these modifiers
+// ============================================
+
+.float-left.padded, .float-right.padded {
+  @media (min-width: 769px) {
+    &.padded-small { padding: 8px; }
+    &.padded-medium { padding: 15px; }
+    &.padded-large { padding: 18px; }
+  }
+}
+
+// ============================================
+// UTILITY CLASSES
+// ============================================
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.clear {
+  clear: both;
+}
+
+body, html, .body {
+  background: #fcfefb !important;
+}
+
 #canvas-container {
-   width: 100%;
-   text-align:center;
+  width: 100%;
+  text-align: center;
+  
+  canvas {
+    display: inline;
+    max-width: 100%;
+    height: auto;
+  }
 }
-
-canvas {
-   display: inline;
-}
-
-

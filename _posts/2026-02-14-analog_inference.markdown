@@ -11,7 +11,7 @@ comments: false
 
 ---
 
-![sf_ride_seg](../images/sf_ride_seg.gif){:.center_gif}
+![sf_ride_seg](../images/analog_inference/sf_ride_seg.gif){:.center_gif}
 
 ---
 
@@ -21,7 +21,7 @@ comments: false
 | <span style="font-size: 16px;"> For workloads executing on analog compute fabrics, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, its value depends critically on **how fabric noise impacts end-to-end accuracy**. </span> |
 | <span style="font-size: 16px;"> This page describes an evaluation approach that tracks the effects of fabric noise on image segmentation models, whose primary tasks are **object localization** and **classification**. Extending the [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP), this approach captures and quantifies the impact of noise on both of these tasks. </span> |
 | <span style="font-size: 16px;"> In a standard evaluation, detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, this is a traditional binary classification process with four (true/false positive/negative) outcomes:  </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 $$
@@ -34,35 +34,35 @@ $$
 
 |:-|
 | <span style="font-size: 16px;"> Add noise, and this process gets trickier: outcomes become variable. This means that some detections may travel across the TP, FP, FN, TN categories due to noise. This variability is not captured by AP. And while the practical impact may vary, capturing and quantifying such dynamics is essential. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 ---
 
 |-:|
 |  <span style="font-size: 22px;"> Warm-Up Calculation of AP 🐕‍🦺🦮🐩🐕🐶 </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |:-|
 | <span style="font-size: 16px;"> Let's say there's a total of 50 dogs in the entire validation dataset spread across 100 images. Naturally, a trained model would generate low scores for images with no dogs, high scores for images with dogs, and medium scores for images with similar-looking animals. </span> |
 | <span style="font-size: 16px;"> The plot below represents a typical evaluation run with two distinct but overlapping distributions. The scores range from <span style="font-size: 16px; color: #a82a2a; "> **0.00 to 0.60** </span> for <span style="font-size: 16px; color: #a82a2a; "> **no dogs**</span> and from <span style="font-size: 16px;  color: #2b31fb; "> **0.35 to 1.00**</span> for <span style="font-size: 16px;  color: #2b31fb; "> **dogs**</span>. For a comprehensive evaluation, the scores are classified using multiple thresholds rather than a single one. And even though the middle region is where the action takes place, classification is performed across the entire scale, from far left to far right. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
-![dogs_no_dogs](../images/dogs_no_dogs.gif){:.center_gif}
+![dogs_no_dogs](../images/analog_inference/dogs_no_dogs.gif){:.center_gif}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |:-|
 | <span style="font-size: 16px;"> To provide a concise numerical example, I make up predictions, cluster them at 10 confidence scores, and couple with an intersection over union (IoU) level in the table below (left). This allows a full sweep of the scale with only 11 evaluation thresholds, resulting in 11 binary classifications (right). Each classification yields a (TP, FP, FN, TN) set and is reduced to recall $$ (R) $$ and precision $$ (P) $$ ratios. The 11 precision ratios are further condensed into a single $$ AP $$ value using an appropriate **measure of central tendency (MoT)**. This process is performed across 10 IoU thresholds resulting in 10 $$ AP_{dog\ @\ IoU} $$ values which are then averaged to get the final $$ AP_{dog} = \frac{1}{10} \sum AP_{dog\ @\ IoU} $$. </span> |
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 $$
 \begin{array}{c|cc}
@@ -97,11 +97,11 @@ $$
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |:-|
 | <span style="font-size: 16px;"> As a concrete example, I use the MoT below to compute $$ AP_{dog} $$, where $$ P_i $$ and $$ R_i $$ are precision and recall at threshold $$ i $$ and $$ R_{i-1} = 0 $$. Plugging in the numbers from the table yields 0.987 @ IoU 0.5. And for the sake of completeness, assume that $$ AP_{dog,\ IoU} $$ drops by 0.100 as IoU threshold tightens $$ (↑) $$ to get the final $$ AP_{dog} $$. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 $$ \text{ (1)}\   AP_{dog\ @\ IoU(0.50)} = \sum_{i=1}^{11} P_i*(R_{i}-R_{i-1}) = 0.987 \\ . \\ . \\ . \\ \text{(10)}\   AP_{dog\ @\ IoU(0.95)} = \sum_{i=1}^{11} P_i*(R_{i}-R_{i-1}) = 0.087 $$
 
@@ -113,7 +113,7 @@ $$ AP_{dog} = \frac{1}{10} \sum_{IoUs} AP_{dog\ @\ IoU} = 0.537 $$
 
 |:-|
 | <span style="font-size: 16px;"> $$ AP $$ addresses both localization and classification through calculations across IoUs and confidence thresholds, and is deemed sufficient for evaluating image segmentation models. But here comes the noise.</span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 
@@ -124,12 +124,12 @@ $$ AP_{dog} = \frac{1}{10} \sum_{IoUs} AP_{dog\ @\ IoU} = 0.537 $$
 
 |-:|
 |  <span style="font-size: 22px;"> Seemingly Good Randomness </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |:-|
 | <span style="font-size: 16px;"> Analog computing brings noise into the picture, making computation results inherently variable. This variability originates at the fabric level, affecting fundamental linalg operations like matrix-vector multiplication (MVM), and propagates all the way to confidence score generation. As a result, evaluation becomes more statistical, requiring not only a measure of central tendency but also a **measure of variability (MoV)**. </span> |
 | <span style="font-size: 16px;"> Conceptually, a segmentation model can be viewed as a composition of layers with linalg ops. Confidence score generation is therefore a function of the composition of these ops. And since the fundamental ops are noisy, the resulting scores vary as well. Symbolic shorthand: </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 $$ S = f(img) \qquad → \qquad  f = f_{L} ∘ f_{L−1} ∘ ⋯ ∘ f_{1} $$
@@ -141,21 +141,21 @@ $$ S = f^{noisy}(img) \qquad → \qquad \tilde{S} \sim D_{pushforward} $$
 
 |:-|
 | <span style="font-size: 16px;"> The key is that the score effectively becomes a random variable drawn from a pushforward of the noise distribution through the layers. In other words, for the same input image, each forward pass yields a new realization of the score. Below is a visual representation of this behavior, showing varying scores generated by an analog fabric for the same set of images. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 <span style="font-size: 16px; color: #a82a2a; "></span> 
 
-![variable_scores](../images/variable_scores.gif){:.center_gif}
+![variable_scores](../images/analog_inference/variable_scores.gif){:.center_gif}
 
 |:-|
 | <span style="font-size: 16px;"> To capture this variability, $$ AP_{dog} $$ is computed repeatedly over many time points (snapshots of the animation above) and PVT corners, yielding multiple $$ APs $$. These data points are then treated as any other statistical data: plotted and summarized using appropriate measures of central tendency and variability. </span> |
 | <span style="font-size: 16px;"> With standard $$ AP $$, however, there's a risk of classifying random outcomes as true positives and true negatives when they happen to match the ground truth. To tease out these seemingly positive effects, I recommend a modification to the traditional classification process: compare noisy detections against a combination of digital detections and ground truths. This refinement makes evaluation more rigorous, **prioritizing average consistency over occasional performance**. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 $$
 \begin{array}{c|cc}
@@ -173,11 +173,11 @@ $$
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |:-|
 | <span style="font-size: 16px;"> Together, the modified classification, repeatedly computed $$ AP $$, and additional MoT and MoV constitute what I simply call <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span>. This metric provides deeper insight than standard $$ AP $$ for analog computing. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 ---
 
@@ -190,41 +190,41 @@ $$
 
 |-:|
 |  <span style="font-size: 22px;"> Yet, It Is a Summary Statistic </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |:-|
 | <span style="font-size: 16px;"> <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> is a dense metric; some effects may still be buried or averaged out. A sensitivity analysis on individual images or object types can help uncover pain points that <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> might miss. </span> |
 | <span style="font-size: 16px;"> Below is an example of such analysis, sweeping across a noise parameter and tracking the effects. Modeled as a normal distribution, the error caused by noise is added to MVMs performed by the fabric. The animation increases error's standard deviation from 0.001 to 0.135 and tracks IoUs and confidence scores for two objects: a small, blurry bird on the left and a large, clear bird on the right. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
-![birds_no_birds](../images/birds_no_birds.gif){:.center_gif}
+![birds_no_birds](../images/analog_inference/birds_no_birds.gif){:.center_gif}
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 |:-|
 | <span style="font-size: 16px;"> The results reveal three key effects of analog noise. First, **object localization is largely unaffected** by higher noise levels: the blue IoUs lines just wobble around their initial levels. Second, **confidence scores decrease** steadily with noise, following a concave-down trajectory. Though, this alone does not cause mispredictions as the confidence drops across other classes as well. And third, objects that are generally harder to detect **(smaller, blurry, overlapping) are more susceptible** to noise, falling below detection thresholds sooner. </span> |
 | <span style="font-size: 16px;"> The first two effects are discernible even in the dense metric, but the third one is easily buried due to varying object sizes and overlap conditions. To me, this is a clear sign that looking beyond summary statistics is worthwhile. Together, sensitivity analysis and <span style="font-size: 16px; color: #a82a2a; ">**Analog AP**</span> can more thoroughly assess end-to-end accuracy, and ultimately help decide on the value of the power-accuracy tradeoff. </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
 
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 ---
 
 
 |-:|
 | <span style="font-size: 1px;"> . </span> |
-{:.about_table4}
+{:.responsive-table}
 
 
