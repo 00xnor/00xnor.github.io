@@ -1,6 +1,6 @@
 ---
 layout: post
-date:   2026-02-14 00:00:00 -0800
+date:   2026-02-15 00:00:00 -0800
 author: Sergey Ostrikov
 group: Tech
 title: Analog Inference 
