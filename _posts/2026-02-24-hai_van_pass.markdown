@@ -3,7 +3,7 @@ layout: post
 date:   2026-02-24 00:00:00 -0800
 author: Sergey Ostrikov
 group: Cycling Adventures
-title: 🇻🇳 Hải Vân Pass
+title: 🇻🇳 Hải Vân Pass, Vietnam
 permalink: /hai_van_pass/
 published: true
 comments: false
