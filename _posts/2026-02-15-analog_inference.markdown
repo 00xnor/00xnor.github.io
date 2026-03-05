@@ -16,7 +16,7 @@ comments: false
 ---
 
 |:-|
-| <span style="font-size: 16px;"> With analog computing, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, inherent circuit noise introduces variability into the computational results, making accuracy evaluation more nuanced. </span> |
+| <span style="font-size: 16px;"> With analog computing, power can be slashed by orders of magnitude at the expense of computational accuracy. While this tradeoff offers clear power benefits, inherent circuit noise introduces variability into the computational results, making accuracy evaluation a nuanced statistical exercise. </span> |
 | <span style="font-size: 16px;"> This page describes an evaluation approach that tracks **the effects of circuit noise** on image segmentation models, whose primary tasks are **object localization** and **classification**. Extending the [average precision](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Average_precision){:target="_blank"} metric (AP), this approach captures and quantifies the impact of noise on both of these tasks. </span> |
 | <span style="font-size: 16px;"> In a standard evaluation, detections (DT) are compared against ground truths (GT) from a validation dataset. At its core, this is a traditional binary classification process with four (true/false positive/negative) outcomes:  </span> |
 {:.responsive-table}
