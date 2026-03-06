@@ -96,7 +96,7 @@ comments: false
 
 
 |-:|
-| <span style="font-size: 16px;"> I hop on the HSR, and I'm back in Taipei. The main station is hella busy in the evening. The subway cars are packed. A bit surprised but understanding, people make space for my bike, and the red MRT line takes me all the way to Zhongyi, where my journey began. It's a long ride, some 14 stops. Somehow it feels even longer than the climb. But this is it: I step out of the station and reassemble my bike for the last mile back to my Airbnb. Goodbye trains. Goodbye Taiwan. For now. </span> |
+| <span style="font-size: 16px;"> I hop on the HSR, and I'm back in Taipei. The main station is hella busy in the evening. The subway cars are packed. A bit surprised but understanding, people make space for my bike, and the red MRT line takes me all the way to Zhongyi, where my journey began. It's a long ride, some 14 stops. Somehow it feels even longer than the climb. But this is it: I step out of the station and reassemble my bike for the last mile back to my Airbnb. Goodbye trains. Goodbye, Taiwan. Goodbye for now. </span> |
 {:.responsive-table}
 
 ---
