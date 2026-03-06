@@ -81,7 +81,7 @@ comments: false
 ![3275](../images/wuling_pass/3275.png){:.float-left}
 
 |-:|
-| <span style="font-size: 16px;"> Concerned about turning into a popsicle on the way down, I pull two pairs of plastic food-handling gloves from my pocket. I got them at 7-Eleven, along with two rubber bands to keep the cold air out. I was warned, so I did my best to prepare to [Roll Safe](https://en.wikipedia.org/wiki/Roll_Safe){:target="_blank"}. </span> |
+| <span style="font-size: 16px;"> Concerned about turning into a popsicle on the way down, I pull two pairs of plastic food-handling gloves from my pocket. I got them at 7-Eleven, along with two rubber bands to keep the cold air out. I was warned, so, I prepped to [Roll Safe](https://en.wikipedia.org/wiki/Roll_Safe){:target="_blank"}, or warm, at least. </span> |
 | <span style="font-size: 16px;"> Climbing is fun. Rolling downhill for 70 miles? Terrifying. It is too steep and cold to have my phone out. Such a shame I don't have my GoPro with me either, because the 30-mile ride down to Puli is a visual journey. </span> |
 | <span style="font-size: 16px;"> Back in Puli, safe, I peel off my windbreaker. The air is warmer, the ground flatter. Feels strange to be back. It was a different world just a few hours ago. The final 40 miles are a slight downhill to Taichung. A gradual return to civilization. More lights, more traffic, and trains... again. </span> |
 {:.responsive-table}
@@ -96,7 +96,7 @@ comments: false
 
 
 |-:|
-| <span style="font-size: 16px;"> I hop on the HSR, and I'm back in Taipei. The main station is hella busy in the evening, the subway cars packed. A bit surprised but understanding, people make space for my bike, and the red MRT line takes me all the way to Zhongyi, where my journey began. It's a long ride, some 14 stops. Somehow it feels even longer than the morning climb. But this is it: I step out of the station and reassemble my bike for the last mile back to my Airbnb. Goodbye trains. Goodbye Taiwan. For now. </span> |
+| <span style="font-size: 16px;"> I hop on the HSR, and I'm back in Taipei. The main station is hella busy in the evening. The subway cars are packed. A bit surprised but understanding, people make space for my bike, and the red MRT line takes me all the way to Zhongyi, where my journey began. It's a long ride, some 14 stops. Somehow it feels even longer than the climb. But this is it: I step out of the station and reassemble my bike for the last mile back to my Airbnb. Goodbye trains. Goodbye Taiwan. For now. </span> |
 {:.responsive-table}
 
 ---
