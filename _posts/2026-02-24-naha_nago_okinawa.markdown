@@ -18,6 +18,11 @@ comments: false
 | <span style="font-size: 16px;"> 🚴: [Strava](https://www.strava.com/activities/16861918300){:target="_blank"} 🎧: [Coulou](https://youtu.be/mfU825Pg9k8?t=3389){:target="_blank"} </span> |
 {:.responsive-table}
 
+
+|-:|
+| <span style="font-size: 16px;"> У самурая нет цели, только путь. </span> |
+{:.responsive-table}
+
 |-:|
 | <span style="font-size: 1px;"> . </span> |
 {:.about_table}

@@ -16,7 +16,7 @@ permalink: /about/
 ---
 
 |:-|
-| <span style="font-size: 16px;"> Hi, I'm an engineer with a decade of hands-on experience in **silicon development**, including early-stage development of an AI inference accelerator and full-cycle work on a secure memory IC from concept to delivery and certification. I enjoy building prototypes that help stakeholders decide on new product commitments. Some things I’ve been up to professionally: </span> |
+| <span style="font-size: 16px;"> Hi, I'm a systems engineer with a decade of hands-on experience in **silicon development**, including early-stage development of an AI inference accelerator and full-cycle work on a secure memory IC from concept to delivery and certification. I enjoy building prototypes that help stakeholders decide on new product commitments. Some things I’ve been up to professionally: </span> |
 {:.about_table88}
 
 ---
