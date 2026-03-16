@@ -25,7 +25,7 @@ comments: false
 
 |-:|
 | <span style="font-size: 16px;"> The animation <span style="font-size: 20px;"> → </span> features a linear graph being mapped onto a mesh, showing how the algorithm finds one of the **optimal** solutions. Linear graphs are well-suited for developing mapping intuition because the optimal solutions are known. In fact, the mapping for such graphs can be entirely rule-based, following the obvious up/down/left/right/stair/snake patterns. </span> |
-| <span style="font-size: 16px;"> However, today's most prominent workloads are rarely linear. Regardless of what the term **workload** brings to mind—be it hyperscale/orchestration level, multi-agent, neural-network, or micro-op level like decomposition of conv2d into im2col and gemm—it is often a non-linear graph like the one below. Mapping patterns for such graphs aren't obvious, especially when the mapping space is constrained. </span> |
+| <span style="font-size: 16px;"> However, today's most prominent workloads are rarely linear. Regardless of what the term **workload** brings to mind, be it hyperscale/orchestration level, multi-agent, neural-network, or micro-op level like decomposition of conv2d into im2col and gemm, it is often a non-linear graph like the one below. Mapping patterns for such graphs aren't obvious, especially when the mapping space is constrained. </span> |
 {:.responsive-table}
 
 ---
@@ -48,7 +48,7 @@ comments: false
 
 |:-|
 | <span style="font-size: 16px;"> The iterative mapping employs <span style="font-size: 16px;  color: #a82a2a; "> **Ants** </span> to search for an optimal path. Each <span style="font-size: 16px;  color: #a82a2a; "> **Ant** </span> starts at a specific location in the hardware graph (e.g. top-left corner in the animation above) and is given a number of choices on where to go next. Before hopping to the next location, the <span style="font-size: 16px;  color: #a82a2a; "> **Ant** </span> assigns a task to the current location and removes it from the task graph marking it as complete. Each <span style="font-size: 16px;  color: #a82a2a; "> **Ant** </span> keeps hopping until all tasks from the task graph are gone. </span> |
-| <span style="font-size: 16px;"> This entire process represents an algorithm's iteration—a single <span style="font-size: 16px;  color: #a82a2a; "> **Ant Colony** </span> run. During the very first run, the <span style="font-size: 16px;  color: #a82a2a; "> **Ants** </span> are unbiased. This means one <span style="font-size: 16px;  color: #a82a2a; "> **randomly** </span> happens to find a more efficient path than the others. Just like in any competition, the winner gets to brag about how it did it: “I started in the top left, moved right, then down…” You get the idea. Having listened to the winner, the next <span style="font-size: 16px;  color: #a82a2a; "> **Ant Colony** </span> run becomes slightly biased towards the <span style="font-size: 16px;  color: #a82a2a; "> **randomly** </span> chosen path. This is good randomness though, as it produced the best result so far. </span> |
+| <span style="font-size: 16px;"> This entire process represents an algorithm's iteration - a single <span style="font-size: 16px;  color: #a82a2a; "> **Ant Colony** </span> run. During the very first run, the <span style="font-size: 16px;  color: #a82a2a; "> **Ants** </span> are unbiased. This means one <span style="font-size: 16px;  color: #a82a2a; "> **randomly** </span> happens to find a more efficient path than the others. Just like in any competition, the winner gets to brag about how it did it: “I started in the top left, moved right, then down…” You get the idea. Having listened to the winner, the next <span style="font-size: 16px;  color: #a82a2a; "> **Ant Colony** </span> run becomes slightly biased towards the <span style="font-size: 16px;  color: #a82a2a; "> **randomly** </span> chosen path. This is good randomness though, as it produced the best result so far. </span> |
 | <span style="font-size: 16px;"> To keep producing improvements, the <span style="font-size: 16px;  color: #a82a2a; "> **heuristic** </span> ought to maintain  just the right conditions for randomness to work its magic: providing guidance but also allowing deviaton. Here's how this is done in practice: </span> |
 | <span style="font-size: 16px;">  </span> |
 {:.responsive-table}
@@ -155,7 +155,7 @@ prob_other = 0.7937 / 209.49 ≈ 0.379%
 
 |-:|
 | <span style="font-size: 35px;  color: #686a68; "> --------------------------------- </span> |
-| <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. Given the constraints—fixed location for the first and last tasks [0 & 15], and the smallest possible mesh for this graph [4x4]—the algorithm quickly finds a good solution that is only 6 hops away from the optimal (unconstrained) one. </span> |
+| <span style="font-size: 16px;"> The result found by the algorithm for the task graph above is 25 hops. Given the constraints (fixed location for the first and last tasks [0 & 15], and the smallest possible mesh for this graph [4x4]), the algorithm quickly finds a good solution that is only 6 hops away from the optimal (unconstrained) one. </span> |
 | <span style="font-size: 35px;  color: #686a68; "> --------------------------------- </span> |
 {:.responsive-table}
 
