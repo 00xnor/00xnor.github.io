@@ -5,7 +5,7 @@ author: Sergey Ostrikov
 group: Cycling Adventures
 title: 🇻🇳 Hải Vân Pass, Vietnam
 permalink: /hai_van_pass/
-published: true
+published: false
 comments: false
 ---
 

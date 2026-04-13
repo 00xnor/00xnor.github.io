@@ -5,7 +5,7 @@ author: Sergey Ostrikov
 group: Cycling Adventures
 title: 🇺🇸 Oahu, Hawaii
 permalink: /oahu_hawaii/
-published: true
+published: false
 comments: false
 ---
 
