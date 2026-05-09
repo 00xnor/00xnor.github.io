@@ -16,20 +16,20 @@ permalink: /about/
 ---
 
 |:-|
-| <span style="font-size: 16px;"> Hi, I'm a systems engineer with a decade of hands-on experience in **silicon development**, including early-stage development of an AI inference accelerator and full-cycle work on a secure memory IC from concept to delivery and certification. I enjoy building prototypes that help stakeholders decide on new product commitments. Some things I’ve been up to professionally: </span> |
+| <span style="font-size: 16px;"> Hi, I engineer at the intersection of **AI workloads** and **Memory System Architecture**. I take a proactive interest in emerging memory technologies & interfaces (HBM, HBF, LP/DDR5/6, ONFI, NVMe, CXL) and have experience with mature technologies (NOR, NAND, LP/DDR4, FTL). Below are some things I've been up to professionally: </span> |
 {:.about_table88}
 
 ---
 
 |:-|
-| <span style="font-size: 16px;"> **Lead Principal Engineer**, Infineon Technologies, 2020-2025, San Jose, CA </span> |
+| <span style="font-size: 16px;"> **Lead Principal Engineer** (Memory Solutions), Infineon, 2020-2025, San Jose, CA </span> |
 {:.responsive-table}
 
 |:-|
-● | <span style="font-size: 16px;"> In this role, I shaped the evaluation of an **analog in-memory compute technology**. I developed a graph compiler as a primary vehicle for architecture exploration and tradeoff analysis. </span> |
-● | <span style="font-size: 16px;"> For PPA analysis, I developed a heuristic-based algorithm that maps a task graph onto a hardware connectivity graph ([**demo**]({% post_url 2026-01-14-mapping_algo %})).<br> (neural network) <span style="font-size: 18px;"> → </span> (distributed in-memory compute fabric) </span> |
-● | <span style="font-size: 16px;"> Formulated a nuanced approach for assessing accuracy of analog inference beyond standard evaluation metrics ([**description**]({% post_url 2026-02-15-analog_inference %})). </span> |
-● | <span style="font-size: 16px;"> And finally, I did a comparison of the technology against leading [AI accelerators](https://nicsefc.ee.tsinghua.edu.cn/projects/neural-network-accelerator.html){:target="_blank"} and presented my findings at a JEDEC AI workshop. </span> |
+● | <span style="font-size: 16px;"> In this role: I explored and evaluated storage-centric AI architectures by characterizing computer vision workloads and teasing out memory access patterns </span> |
+● | <span style="font-size: 16px;"> Developed an algorithm to efficiently map workloads onto memories <br> (neural network) <span style="font-size: 18px;"> → </span> (analog in-memory compute fabric) ([**demo**]({% post_url 2026-01-14-mapping_algo %}))</span> |
+● | <span style="font-size: 16px;"> Formulated a nuanced approach for assessing accuracy of neural networks running on analog in-memory compute fabric ([**demo**]({% post_url 2026-02-15-analog_inference %})) </span> |
+● | <span style="font-size: 16px;"> Presented my work at **JEDEC** </span> |
 {:.about_table66}
 
 

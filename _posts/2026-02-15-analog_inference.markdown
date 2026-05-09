@@ -12,6 +12,8 @@ comments: false
 ---
 
 ![sf_ride_seg](../images/analog_inference/sf_ride_seg.gif){:.center_gif}
+my trusty cannondale
+{:.text-center}
 
 ---
 

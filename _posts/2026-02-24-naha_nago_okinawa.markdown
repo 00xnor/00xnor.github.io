@@ -21,15 +21,18 @@ comments: false
 
 
 |-:|
-| <span style="font-size: 16px;"> Boxy cars passing on the right, chain spinning, legs waking up: good morning Okinawa! </span> |
-| <span style="font-size: 16px;"> Staying on the left side of the road is foreign to me. Not only do I have to look over my right shoulder, I also have to be mindful of turns: left - roll, right - stop. My instincts are useless. But somehow it's not constraining. Okinawa is chill like that. </span> |
-| <span style="font-size: 16px;"> Okinawa. I like saying Okinawa. The way it sounds aligns with the way it feels. It is one of 426 inhabited islands south of Honshu, the main island. And there are anywhere between 3000 and 6852 islands in that area. I learned that from a book on the [Ryukyu Islands](https://www.amazon.com/Okinawa-Ryukyu-Islands-Comprehensive-Entire/dp/4805312335){:target="_blank"} I'd just finished. Full of stats and a bit dry. Not quite Ostrov Sakhalin, but something like it: unconventionally inspiring. </span> |
+| <span style="font-size: 16px;"> Okinawa. I like saying Okinawa. The way it sounds aligns with the way it looks & feels. It is one of 426 inhabited islands south of Honshu, the main island of Japan. And there are anywhere between 3000 and 6852 islands in this area. I learned that from a book on the [Ryukyu Islands](https://www.amazon.com/Okinawa-Ryukyu-Islands-Comprehensive-Entire/dp/4805312335){:target="_blank"} I'd just finished. It's full of stats and a bit dry. Not quite Ostrov Sakhalin, but something like it: unconventionally luring. </span> |
+| <span style="font-size: 16px;"> But it's time for the book to go back on the shelf, Pocari Sweat in my water bottle, and me on my bike. Starting in Naha down south, I'm headed up north until I feel it's time to stop or turn back. </span> |
+| <span style="font-size: 16px;">У самурая нет цели, только путь. </span> |
 {:.responsive-table}
 
 ---
 
+
+
 |-:|
-| <span style="font-size: 16px;"> Something to think about, some pedaling to do, Pocari Sweat in my water bottle, it doesn't get better than this. I'm headed up north until I feel it's time to turn back. У самурая нет цели, только путь. </span> |
+| <span style="font-size: 16px;"> Boxy cars passing on the right, chain spinning, legs waking up: goooood morning Okinawa! </span> |
+| <span style="font-size: 16px;"> Staying on the left side of the road is foreign to me. Not only do I have to look over my right shoulder, I also have to be mindful of turns. Left - roll. Right - stop. My instincts are useless. But somehow it's not constraining. Okinawa is chill like that. </span> |
 {:.responsive-table}
 
 
